@@ -3,252 +3,264 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Texas Movement Social — Cross-City Nightlife Engine</title>
-<meta name="description" content="Texas Movement Social links top Dallas and Houston promoters with Chicago venues to deliver packed rooms, higher bar spend, and inclusive, repeatable nights—engineered like a system, not a gamble.">
+<title>Gather™ by Texas Movement Social — A New Way to Mark What Matters</title>
+<meta name="description" content="Gather™ is a ceremony experience platform for weddings, births, and engagements. Built on Circle OS™, our AI-native planning system. Join the private waitlist.">
 <style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  :root{--bg:#0a0a0a;--ink:#f5f5f5;--mute:#9a9a9a;--line:#1f1f1f;--accent:#c8102e}
-  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
-  a{color:var(--ink);text-decoration:none}
-  .wrap{max-width:920px;margin:0 auto;padding:64px 24px 96px}
-  .back{display:inline-block;font-size:.85rem;color:var(--mute);margin-bottom:48px;letter-spacing:.04em;transition:color .2s}
-  .back:hover{color:var(--ink)}
-  .eyebrow{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px}
-  h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:20px}
-  .lede{font-size:1.15rem;color:#d0d0d0;max-width:640px;margin-bottom:40px;line-height:1.7}
-  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:80px}
-  .btn-primary{background:var(--accent);color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;font-size:.95rem;transition:opacity .2s;display:inline-block}
-  .btn-primary:hover{opacity:.88}
-  .btn-secondary{border:1px solid var(--line);color:var(--ink);padding:14px 28px;border-radius:8px;font-weight:500;font-size:.95rem;transition:border-color .2s;display:inline-block}
-  .btn-secondary:hover{border-color:var(--mute)}
-  section{margin-bottom:72px}
-  h2{font-size:1.5rem;font-weight:700;margin-bottom:32px;padding-bottom:12px;border-bottom:1px solid var(--line)}
-  h3{font-size:1.05rem;font-weight:600;margin-bottom:8px}
-  .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-  .card{border:1px solid var(--line);border-radius:14px;background:#0f0f0f;padding:24px}
-  .card-tag{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;font-weight:600}
-  .card p{color:var(--mute);font-size:.9rem;line-height:1.6}
-  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-  .step{border:1px solid var(--line);border-radius:14px;background:#0f0f0f;padding:24px}
-  .step-num{font-size:2rem;font-weight:800;color:var(--accent);margin-bottom:12px;line-height:1}
-  .step p{color:var(--mute);font-size:.9rem;line-height:1.6}
-  .pillar{border-left:3px solid var(--accent);padding:20px 24px;background:#0f0f0f;border-radius:0 14px 14px 0;margin-bottom:16px}
-  .pillar h3{margin-bottom:6px;font-size:1rem}
-  .pillar p{color:var(--mute);font-size:.9rem;line-height:1.6}
-  .form-section{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-  @media(max-width:640px){.form-section{grid-template-columns:1fr}}
-  .form-card{border:1px solid var(--line);border-radius:14px;background:#0f0f0f;padding:32px}
-  .form-label{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;font-weight:600;display:block}
-  .form-card h3{font-size:1.15rem;margin-bottom:6px}
-  .form-card p.sub{color:var(--mute);font-size:.85rem;margin-bottom:24px}
-  .field{margin-bottom:14px}
-  .field label{display:block;font-size:.8rem;color:var(--mute);margin-bottom:6px}
-  .field input,.field select,.field textarea{width:100%;background:#161616;border:1px solid var(--line);border-radius:8px;padding:10px 14px;color:var(--ink);font-size:.9rem;font-family:inherit;outline:none;transition:border-color .2s}
-  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent)}
-  .field select option{background:#161616}
-  .field textarea{resize:vertical;min-height:80px}
-  .submit-btn{width:100%;background:var(--accent);color:#fff;border:none;padding:13px;border-radius:8px;font-weight:600;font-size:.95rem;cursor:pointer;transition:opacity .2s;margin-top:8px}
-  .submit-btn:hover{opacity:.88}
-  .tagline{text-align:center;padding:40px 0 0;border-top:1px solid var(--line);color:var(--mute);font-size:.9rem;font-style:italic}
-  footer{border-top:1px solid var(--line);margin-top:80px;padding-top:32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:.85rem;color:var(--mute)}
-  footer a{color:var(--mute);transition:color .2s}
-  footer a:hover{color:var(--ink)}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0a;--ink:#f5f5f5;--mute:#9a9a9a;--line:#1f1f1f;--accent:#c8102e}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+a{color:var(--ink);text-decoration:none}
+.wrap{max-width:920px;margin:0 auto;padding:64px 24px 96px}
+.back{display:inline-block;font-size:.85rem;color:var(--mute);margin-bottom:48px;letter-spacing:.04em;transition:color .2s}
+.back:hover{color:var(--ink)}
+.eyebrow{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px}
+h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:20px}
+.lede{font-size:1.15rem;color:#d0d0d0;max-width:640px;margin-bottom:16px;line-height:1.7}
+.support-line{font-size:.85rem;color:var(--mute);margin-bottom:48px;letter-spacing:.02em}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:80px}
+.btn-primary{background:var(--accent);color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;font-size:.95rem;transition:opacity .2s;display:inline-block}
+.btn-primary:hover{opacity:.88}
+.btn-secondary{border:1px solid var(--line);color:var(--ink);padding:14px 28px;border-radius:8px;font-weight:500;font-size:.95rem;transition:border-color .2s;display:inline-block}
+.btn-secondary:hover{border-color:var(--mute)}
+section{margin-bottom:72px}
+h2{font-size:1.5rem;font-weight:700;margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+h3{font-size:1.05rem;font-weight:600;margin-bottom:8px}
+.body-text{color:#d0d0d0;line-height:1.75;margin-bottom:16px;max-width:720px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.card{border:1px solid var(--line);border-radius:14px;background:#0f0f0f;padding:24px}
+.card-tag{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;font-weight:600}
+.card p{color:var(--mute);font-size:.9rem;line-height:1.6}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:24px}
+.step{border:1px solid var(--line);border-radius:14px;background:#0f0f0f;padding:24px}
+.step-num{font-size:2rem;font-weight:800;color:var(--accent);margin-bottom:12px;line-height:1}
+.step p{color:var(--mute);font-size:.9rem;line-height:1.6}
+.pillar{border-left:3px solid var(--accent);padding:20px 24px;background:#0f0f0f;border-radius:0 14px 14px 0;margin-bottom:16px}
+.pillar h3{margin-bottom:6px;font-size:1rem}
+.pillar p{color:var(--mute);font-size:.9rem;line-height:1.6}
+.bullet-list{list-style:none;margin:16px 0 0 0}
+.bullet-list li{color:#d0d0d0;font-size:.95rem;padding:8px 0 8px 20px;border-bottom:1px solid var(--line);position:relative;line-height:1.6}
+.bullet-list li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+.bullet-list li:last-child{border-bottom:none}
+.faq-item{border-bottom:1px solid var(--line);padding:20px 0}
+.faq-item:first-child{padding-top:0}
+.faq-q{font-size:1rem;font-weight:600;margin-bottom:8px}
+.faq-a{color:var(--mute);font-size:.9rem;line-height:1.7}
+.moment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px}
+.moment-card{border:1px solid var(--line);border-radius:14px;background:#0f0f0f;padding:24px}
+.moment-name{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;font-weight:700}
+.moment-card p{color:var(--mute);font-size:.88rem;line-height:1.65}
+.cta-band{border-top:1px solid var(--line);padding-top:56px;text-align:center}
+.cta-band .emotion{font-size:1.3rem;font-weight:700;margin-bottom:8px;line-height:1.4}
+.cta-band .emotion-sub{color:var(--mute);font-size:.95rem;margin-bottom:32px}
+.cta-band .cta-row{justify-content:center}
+.sub-cta{display:block;margin-top:16px;color:var(--mute);font-size:.85rem}
+.sub-cta a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.ecosystem{background:#0f0f0f;border:1px solid var(--line);border-radius:14px;padding:32px;text-align:center;margin-bottom:56px}
+.ecosystem p{color:var(--mute);font-size:.9rem;line-height:1.7;max-width:560px;margin:8px auto 0}
+footer{border-top:1px solid var(--line);margin-top:80px;padding-top:32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:.85rem;color:var(--mute)}
+footer a{color:var(--mute);transition:color .2s}
+footer a:hover{color:var(--ink)}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <a href="https://texasmovement.com" class="back">← Texas Movement International</a>
+<a href="https://texasmovement.com" class="back">&#8592; Texas Movement International</a>
 
-  <div class="eyebrow">Texas Movement Social · Dallas · Houston · Chicago</div>
-  <h1>Cross-City Nightlife Engine</h1>
-  <p class="lede">TMS links top Dallas and Houston promoters with Chicago venues to deliver packed rooms, higher bar spend, and inclusive, repeatable nights—engineered like a system, not a gamble.</p>
-  <div class="cta-row">
-    <a href="#venue-form" class="btn-primary">Request a Pilot Night</a>
-    <a href="#promoter-form" class="btn-secondary">Join the Promoter Roster</a>
+<!-- HERO -->
+<div class="eyebrow">Gather&#8482; by Texas Movement Social</div>
+<h1>Your moment deserves more than a checklist.</h1>
+<p class="lede">Gather&#8482; is a ceremony experience platform for weddings, births, and engagements&#8202;&#8212;&#8202;designed to make planning calmer, the day more present, and the memory sharper.</p>
+<p class="support-line">Built in Texas. Designed for modern families. Powered by Circle OS&#8482;.</p>
+<div class="cta-row">
+  <a href="mailto:gather@texasmovement.com?subject=Waitlist%20Request" class="btn-primary">Join the Private Waitlist</a>
+  <a href="mailto:gather@texasmovement.com?subject=Circle%20OS%20for%20Pros%20Access" class="btn-secondary">For Planners: Request Early Access</a>
+</div>
+
+<!-- WHAT GATHER IS -->
+<section>
+  <h2>What Gather Is</h2>
+  <p class="body-text">Gather is a new way to mark the moments that change your life. Not just a planning tool&#8202;&#8212;&#8202;a full experience layer that wraps around your ceremony before, during, and long after the day itself. We handle the coordination, the guest touchpoints, and the memory-keeping so that you can actually be present for what matters.</p>
+  <p class="body-text">Each Gather experience is shaped around named rituals and emotionally-aware design. Your guests don't just attend your ceremony&#8202;&#8212;&#8202;they participate in it, gently and meaningfully. No chaos. No dropped threads. No moment lost.</p>
+  <p class="body-text">Gather is powered by Circle OS&#8482;, our ceremony operating system that keeps the planning calm and the memories sharp. Circle OS runs quietly in the background so your experience stays fully human in the foreground.</p>
+</section>
+
+<!-- GATHER PRODUCT LINE -->
+<section>
+  <h2>The Gather&#8482; Experience Line</h2>
+  <p class="body-text">Gather comes in several forms, each built for a specific kind of milestone.</p>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-tag">Weddings</div>
+      <h3>Gather: Union&#8482;</h3>
+      <p>The full wedding ceremony experience. From pre-day planning to Echo&#8482; recap&#8202;&#8212;&#8202;every detail held with intention.</p>
+    </div>
+    <div class="card">
+      <div class="card-tag">Birth &amp; Baby</div>
+      <h3>Gather: Roots&#8482;</h3>
+      <p>Welcome a new life with presence and warmth. Designed for baby showers, birth announcements, and naming ceremonies.</p>
+    </div>
+    <div class="card">
+      <div class="card-tag">Engagements</div>
+      <h3>Gather: Threshold&#8482;</h3>
+      <p>Mark the beginning of yes. A curated experience for engagement celebrations that deserve more than a dinner reservation.</p>
+    </div>
+    <div class="card">
+      <div class="card-tag">Social-First</div>
+      <h3>Gather: Connected&#8482;</h3>
+      <p>For couples and families who want beautiful, shareable moments&#8202;&#8212;&#8202;without handing their day to a content crew.</p>
+    </div>
+    <div class="card">
+      <div class="card-tag">Elevated</div>
+      <h3>Gather: Reserve&#8482;</h3>
+      <p>Luxury ceremony experiences for those who want every detail considered and every moment handled.</p>
+    </div>
+    <div class="card">
+      <div class="card-tag">Private</div>
+      <h3>Gather: Close&#8482;</h3>
+      <p>Intimate, invite-only ceremonies. Small guest counts, high emotional presence, complete privacy.</p>
+    </div>
   </div>
+</section>
 
-  <section>
-    <h2>Who This Is For</h2>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-tag">Chicago Venues</div>
-        <h3>Own the Room</h3>
-        <p>Want fresh, consistent crowds on slower nights without losing control of the room.</p>
-      </div>
-      <div class="card">
-        <div class="card-tag">Dallas &amp; Houston Promoters</div>
-        <h3>Cross-City Platform</h3>
-        <p>Can actually move people and want a cross-city platform, not just one-off flyers.</p>
-      </div>
-      <div class="card">
-        <div class="card-tag">Creators &amp; DJs</div>
-        <h3>Rooms That Respect</h3>
-        <p>Care about both energy and safety, and want rooms that respect all genders, races, and orientations.</p>
-      </div>
-      <div class="card">
-        <div class="card-tag">Queer, Trans &amp; Non-Binary Community</div>
-        <h3>Expected and Protected</h3>
-        <p>Want rooms where you're not just 'tolerated'—you're expected and protected as guests, DJs, or promoters.</p>
-      </div>
+<!-- FOR COUPLES & PARENTS -->
+<section>
+  <h2>For Couples &amp; Parents: Less Stress, More You</h2>
+  <p class="body-text">Planning a wedding or welcoming a baby should feel like one of the best seasons of your life&#8202;&#8212;&#8202;not the most exhausting. Gather is designed to lift the weight so you can feel the joy.</p>
+  <ul class="bullet-list">
+    <li><strong>Clarity from day one.</strong> Our planning assistant asks the right questions and builds a clear picture of your ceremony so nothing gets lost and no one drops the ball.</li>
+    <li><strong>Full presence on the day.</strong> Named rituals like Pause&#8482; and Blessing Circle are built to slow time down at the right moments so you actually feel what's happening.</li>
+    <li><strong>Memories that last.</strong> After the ceremony, your Echo&#8482; recap&#8202;&#8212;&#8202;photos, messages, and moments shaped into a short narrative&#8202;&#8212;&#8202;arrives as a gift you'll return to for years.</li>
+  </ul>
+  <p class="body-text" style="margin-top:24px">Here's how a Gather journey typically unfolds: You share your news&#8202;&#8212;&#8202;an engagement, a pregnancy, a wedding date&#8202;&#8212;&#8202;and join the waitlist. We reach out to learn about your vision and design your specific Gather experience together. On the day, our system supports the flow quietly while you stay in it fully. Afterward, your Echo&#8482; recap lands in your inbox like a keepsake you didn't have to plan for.</p>
+</section>
+
+<!-- FOR PLANNERS & CREATORS -->
+<section>
+  <h2>For Planners &amp; Creators: Your Work, Elevated</h2>
+  <p class="body-text">Circle OS for Pros&#8482; gives professional planners, coordinators, and event creators access to the same operating system that powers Gather&#8202;&#8212;&#8202;built into your existing workflow, not replacing it.</p>
+  <ul class="bullet-list">
+    <li><strong>Cleaner workflows, fewer dropped balls.</strong> Guest touchpoints, ritual scheduling, and memory capture are handled by the system. You stay focused on the relationships and the room.</li>
+    <li><strong>Named rituals that make your brand look exceptional.</strong> Pause&#8482;, Echo&#8482;, Thread&#8482;, Blessing Circle&#8202;&#8212;&#8202;exclusive Gather moments that your clients will remember and talk about.</li>
+    <li><strong>You stay the hero.</strong> Circle OS runs quietly. Your clients experience your vision. The system just makes sure nothing slips.</li>
+  </ul>
+  <p class="body-text" style="margin-top:20px">Early access is limited. If you're a planner, coordinator, or creator who works with high-consideration milestones, apply now and we'll be in touch.</p>
+  <div class="cta-row" style="margin-bottom:0;margin-top:20px">
+    <a href="mailto:gather@texasmovement.com?subject=Circle%20OS%20for%20Pros%20Access" class="btn-secondary">Apply for Circle OS for Pros Early Access</a>
+  </div>
+</section>
+
+<!-- SIGNATURE GATHER MOMENTS -->
+<section>
+  <h2>Signature Gather Moments</h2>
+  <p class="body-text">Gather isn't just logistics&#8202;&#8212;&#8202;it's built around named moments that create emotional anchors in your ceremony. These moments are exclusive to the Gather platform.</p>
+  <div class="moment-grid">
+    <div class="moment-card">
+      <div class="moment-name">Pause&#8482;</div>
+      <p>A short, intentional moment of silence held just before the ceremony begins. No music, no movement&#8202;&#8212;&#8202;just presence. It signals to everyone in the room that something real is about to happen.</p>
     </div>
-  </section>
-
-  <section>
-    <h2>What We Do</h2>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-tag">Texas in Chicago</div>
-        <h3>Cross-City Nights</h3>
-        <p>Parties pairing Chicago venues with vetted Dallas/Houston promoters and DJs for unforgettable takeovers.</p>
-      </div>
-      <div class="card">
-        <div class="card-tag">Trackable Everything</div>
-        <h3>Promoter Systems</h3>
-        <p>Guest lists, codes, and links so every head and table has a source and a receipt. No guessing, just data.</p>
-      </div>
-      <div class="card">
-        <div class="card-tag">Safety Without Prejudice</div>
-        <h3>Culture Design</h3>
-        <p>Training and briefs that make inclusion the norm at the door, on the floor, and in the booth.</p>
-      </div>
+    <div class="moment-card">
+      <div class="moment-name">Echo&#8482;</div>
+      <p>A post-ceremony recap that turns guest photos, shared messages, and recorded moments into a short film or narrative keepsake. Delivered within days of the event as a living memory you can share or keep private.</p>
     </div>
-  </section>
-
-  <section>
-    <h2>How It Works</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <h3>Pick a Pilot Date</h3>
-        <p>You choose a night you want to test; we design a TMS takeover with clear headcount and bar-spend targets.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <h3>We Assemble the Roster</h3>
-        <p>Dallas/Houston/Chicago promoters and DJs get unified branding, trackable links, and content templates.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <h3>We Run the Telemetry</h3>
-        <p>Every guest, table, and bottle is tagged by source so you know exactly who filled the room and what they spent.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <h3>We Iterate or Scale</h3>
-        <p>If the pilot hits targets, we lock a series—weekly or monthly—with refined lineups and better margins.</p>
-      </div>
+    <div class="moment-card">
+      <div class="moment-name">Blessing Circle</div>
+      <p>A structured moment where guests share a wish, hope, or memory with the couple or family&#8202;&#8212;&#8202;without the pressure of public speaking. Warm, comfortable, and always meaningful.</p>
     </div>
-  </section>
-
-  <section>
-    <h2>Our Standards</h2>
-    <div class="pillar">
-      <h3>Safety Without Prejudice</h3>
-      <p>No discrimination based on race, gender, sexuality, or how you present. If you move with respect, you're welcome in the room. Promoters and staff are briefed on inclusion, de-escalation, and get-home-safe norms.</p>
+    <div class="moment-card">
+      <div class="moment-name">Thread&#8482;</div>
+      <p>A living thread of guest messages collected before and after the ceremony. It becomes a digital heirloom that grows over time&#8202;&#8212;&#8202;first-year anniversary notes, milestone check-ins, and more.</p>
     </div>
-    <div class="pillar">
-      <h3>Inclusive, High-Energy Rooms</h3>
-      <p>Bottle culture, dance floor, and queer-friendly corners coexist when the night is designed for it. Queer, trans, and non-binary guests aren't tolerated—they're expected and protected.</p>
+    <div class="moment-card">
+      <div class="moment-name">Question Stone</div>
+      <p>Guests receive a single, beautifully framed question to reflect on during the event. Their responses become part of the Echo&#8482; recap and ceremony keepsake. Thoughtful participation without awkward ice-breakers.</p>
     </div>
-    <div class="pillar">
-      <h3>Data Over Vibes</h3>
-      <p>We measure heads, spend, and repeat attendance so nights can be tuned like a performance program, not left to chance.</p>
+    <div class="moment-card">
+      <div class="moment-name">Letter Loop</div>
+      <p>A structured exchange where the couple or family writes personal letters&#8202;&#8212;&#8202;to each other, to their child, to their future selves&#8202;&#8212;&#8202;sealed and delivered at a future milestone. A promise made tangible.</p>
     </div>
-    <div class="pillar">
-      <h3>We Remember</h3>
-      <p>We remember packed rooms, real DJs, and uncles and aunties watching the door. TMS brings that care into 2026—no funny business, no weak nights. Built on west side soul and south side discipline.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section>
+  <h2>How It Works</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h3>Apply &amp; Share</h3>
+      <p>Join the waitlist and tell us what you're celebrating. We'll reach out with a short intake conversation to understand your vision, your people, and what matters most to you.</p>
     </div>
-  </section>
-
-  <section id="get-started">
-    <h2>Get Started</h2>
-    <div class="form-section">
-
-      <div class="form-card" id="venue-form">
-        <span class="form-label">For Chicago Venues</span>
-        <h3>Request a Pilot Night</h3>
-        <p class="sub">Tell us about your venue and a date you want to test. We'll follow up within 48 hours.</p>
-        <form action="https://formspree.io/f/social@texasmovement.com" method="POST">
-          <input type="hidden" name="_subject" value="TMS Pilot Night Request">
-          <div class="field">
-            <label for="venue-name">Venue Name</label>
-            <input type="text" id="venue-name" name="venue_name" placeholder="The Promontory" required>
-          </div>
-          <div class="field">
-            <label for="venue-contact">Your Name &amp; Role</label>
-            <input type="text" id="venue-contact" name="contact_name" placeholder="Maria Chen, GM" required>
-          </div>
-          <div class="field">
-            <label for="venue-email">Email</label>
-            <input type="email" id="venue-email" name="email" placeholder="maria@venue.com" required>
-          </div>
-          <div class="field">
-            <label for="venue-capacity">Capacity &amp; Typical Slower Night</label>
-            <input type="text" id="venue-capacity" name="capacity" placeholder="400 cap · Tuesdays">
-          </div>
-          <div class="field">
-            <label for="venue-message">Anything else we should know?</label>
-            <textarea id="venue-message" name="message" placeholder="Tell us about the room, vibe, or goals..."></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Submit Request</button>
-        </form>
-      </div>
-
-      <div class="form-card" id="promoter-form">
-        <span class="form-label">For Promoters &amp; DJs</span>
-        <h3>Apply to the Roster</h3>
-        <p class="sub">Tell us your market, your track record, and what you bring to the room.</p>
-        <form action="https://formspree.io/f/social@texasmovement.com" method="POST">
-          <input type="hidden" name="_subject" value="TMS Roster Application">
-          <div class="field">
-            <label for="promo-name">Your Name</label>
-            <input type="text" id="promo-name" name="name" placeholder="DJ Marcus / Marcus Williams" required>
-          </div>
-          <div class="field">
-            <label for="promo-role">Role</label>
-            <select id="promo-role" name="role">
-              <option value="">Select your role</option>
-              <option value="promoter">Promoter</option>
-              <option value="dj">DJ</option>
-              <option value="both">Both</option>
-              <option value="creator">Creator / Influencer</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="promo-market">Primary Market</label>
-            <select id="promo-market" name="market">
-              <option value="">Select your city</option>
-              <option value="dallas">Dallas</option>
-              <option value="houston">Houston</option>
-              <option value="chicago">Chicago</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="promo-email">Email</label>
-            <input type="email" id="promo-email" name="email" placeholder="you@example.com" required>
-          </div>
-          <div class="field">
-            <label for="promo-ig">Instagram Handle</label>
-            <input type="text" id="promo-ig" name="instagram" placeholder="@handle">
-          </div>
-          <div class="field">
-            <label for="promo-message">What do you bring to the room?</label>
-            <textarea id="promo-message" name="message" placeholder="Average headcount, vibe you specialize in, nights you've run..."></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Submit Application</button>
-        </form>
-      </div>
-
+    <div class="step">
+      <div class="step-num">02</div>
+      <h3>We Design Your Experience</h3>
+      <p>Working with our planning assistant and team, we shape your Gather experience&#8202;&#8212;&#8202;selecting rituals, structuring the guest journey, and making sure every moving part has a home.</p>
     </div>
-    <p class="tagline">Safety without prejudice. Energy with accountability.</p>
-  </section>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h3>Celebrate &amp; Receive</h3>
+      <p>You show up and be present. We support the day quietly in the background. Within days, your Echo&#8482; recap arrives&#8202;&#8212;&#8202;a finished memory you didn't have to make yourself.</p>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <span>© 2026 Texas Movement Social · <a href="https://texasmovement.com">texasmovement.com</a></span>
-    <span>Part of Texas Movement International · Est. 2015</span>
-  </footer>
+<!-- FAQ -->
+<section>
+  <h2>Questions We Hear Often</h2>
+  <div class="faq-item">
+    <div class="faq-q">Is this just another planning app?</div>
+    <div class="faq-a">Gather is not a task manager or a vendor directory. It's a full ceremony experience layer&#8202;&#8212;&#8202;built around emotional design, named rituals, and memory capture&#8202;&#8212;&#8202;that wraps around your milestone from planning through the aftermath. Think of it less like software and more like a thoughtful co-designer.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Do I have to be very online or on every social platform?</div>
+    <div class="faq-a">Not at all. Gather is designed to be as private or as shareable as you choose. You control what gets captured, what gets shared, and who sees it. Some families use Gather for a completely private ceremony with zero social output. Others use Gather: Connected&#8482; to create beautiful, intentional content. Both are fully supported.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can I use Gather if I already have a planner or venue?</div>
+    <div class="faq-a">Yes&#8202;&#8212;&#8202;Gather is designed to work alongside your existing planner and venue, not replace them. Circle OS&#8482; integrates into whatever structure is already in place. If you're a planner, ask about Circle OS for Pros&#8482; for a deeper integration layer.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What about privacy and guest data?</div>
+    <div class="faq-a">We take this seriously. Guest information is used only to support your ceremony experience and is never sold, shared, or used for marketing. Your Echo&#8482; recap and Thread&#8482; archive belong to you. We don't use your ceremony content for any purpose beyond delivering your experience.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Where is Gather available right now?</div>
+    <div class="faq-a">Gather is currently in private beta, with capacity limited to a small number of ceremonies during our launch period. We're based in Texas and serving families across the US. Join the waitlist to be considered for early access&#8202;&#8212;&#8202;we'll reach out when a spot opens that matches your timeline.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How much does this cost, roughly?</div>
+    <div class="faq-a">Gather experiences are priced based on the level of support, the size of your ceremony, and which product line fits your milestone. Pricing starts at an accessible tier for smaller, more intimate ceremonies and scales from there. We'll share full pricing during your intake conversation after you join the waitlist.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can my family handle this if they're not tech-savvy?</div>
+    <div class="faq-a">Absolutely. Gather is designed with non-technical guests in mind. Guest participation happens through simple, familiar formats&#8202;&#8212;&#8202;no apps to download, no accounts to create. If a guest can send a text or click a link, they can participate fully in every Gather moment.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Is this only for weddings?</div>
+    <div class="faq-a">No&#8202;&#8212;&#8202;while Gather: Union&#8482; is built specifically for weddings, the broader Gather line serves engagements, births, naming ceremonies, and any milestone that deserves more than a party. If you're marking something that changed your life, Gather was built for it.</div>
+  </div>
+</section>
+
+<!-- ECOSYSTEM -->
+<div class="ecosystem">
+  <div class="eyebrow">Texas Movement International</div>
+  <p>Texas Movement Social and Gather&#8482; are part of the TMI ecosystem&#8202;&#8212;&#8202;a network of mission-driven companies building systems for people who move through life intentionally. <a href="https://texasmovement.com" style="color:var(--accent);">Explore the full ecosystem &#8594;</a></p>
+</div>
+
+<!-- FINAL CTA BAND -->
+<div class="cta-band">
+  <div class="emotion">You only cross this moment once.</div>
+  <div class="emotion-sub">Make it feel like you.</div>
+  <div class="cta-row">
+    <a href="mailto:gather@texasmovement.com?subject=Waitlist%20Request" class="btn-primary">Join the Private Waitlist</a>
+    <a href="mailto:gather@texasmovement.com?subject=Circle%20OS%20for%20Pros%20Access" class="btn-secondary">For Planners: Request Early Access</a>
+  </div>
+</div>
+
+<footer>
+  <span>&#169; 2025 Texas Movement Social. Part of Texas Movement International.</span>
+  <a href="https://texasmovement.com">texasmovement.com</a>
+</footer>
 
 </div>
 </body>
