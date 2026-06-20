@@ -2,266 +2,158 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gather™ by Texas Movement Social — A New Way to Mark What Matters</title>
-<meta name="description" content="Gather™ is a ceremony experience platform for weddings, births, and engagements. Built on Circle OS™, our AI-native planning system. Join the private waitlist.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Texas Movement Social — Gather™, powered by Circle OS™</title>
+<meta name="description" content="Gather™ is the ceremony and experience platform for couples, families, and communities — powered by Circle OS™. Part of Texas Movement International.">
+<meta property="og:title" content="Texas Movement Social — Gather™">
+<meta property="og:description" content="The ceremony and experience platform for couples, families, and communities.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://social.texasmovement.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0a;--ink:#f5f5f5;--mute:#9a9a9a;--line:#1f1f1f;--accent:#c8102e}
-body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
-a{color:var(--ink);text-decoration:none}
-.wrap{max-width:920px;margin:0 auto;padding:64px 24px 96px}
-.back{display:inline-block;font-size:.85rem;color:var(--mute);margin-bottom:48px;letter-spacing:.04em;transition:color .2s}
-.back:hover{color:var(--ink)}
-.eyebrow{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px}
-h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:20px}
-.lede{font-size:1.15rem;color:#d0d0d0;max-width:640px;margin-bottom:16px;line-height:1.7}
-.support-line{font-size:.85rem;color:var(--mute);margin-bottom:48px;letter-spacing:.02em}
-.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:80px}
-.btn-primary{background:var(--accent);color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;font-size:.95rem;transition:opacity .2s;display:inline-block}
-.btn-primary:hover{opacity:.88}
-.btn-secondary{border:1px solid var(--line);color:var(--ink);padding:14px 28px;border-radius:8px;font-weight:500;font-size:.95rem;transition:border-color .2s;display:inline-block}
-.btn-secondary:hover{border-color:var(--mute)}
-section{margin-bottom:72px}
-h2{font-size:1.5rem;font-weight:700;margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--line)}
-h3{font-size:1.05rem;font-weight:600;margin-bottom:8px}
-.body-text{color:#d0d0d0;line-height:1.75;margin-bottom:16px;max-width:720px}
-.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-.card{border:1px solid var(--line);border-radius:14px;background:#0f0f0f;padding:24px}
-.card-tag{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;font-weight:600}
-.card p{color:var(--mute);font-size:.9rem;line-height:1.6}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:24px}
-.step{border:1px solid var(--line);border-radius:14px;background:#0f0f0f;padding:24px}
-.step-num{font-size:2rem;font-weight:800;color:var(--accent);margin-bottom:12px;line-height:1}
-.step p{color:var(--mute);font-size:.9rem;line-height:1.6}
-.pillar{border-left:3px solid var(--accent);padding:20px 24px;background:#0f0f0f;border-radius:0 14px 14px 0;margin-bottom:16px}
-.pillar h3{margin-bottom:6px;font-size:1rem}
-.pillar p{color:var(--mute);font-size:.9rem;line-height:1.6}
-.bullet-list{list-style:none;margin:16px 0 0 0}
-.bullet-list li{color:#d0d0d0;font-size:.95rem;padding:8px 0 8px 20px;border-bottom:1px solid var(--line);position:relative;line-height:1.6}
-.bullet-list li::before{content:"—";position:absolute;left:0;color:var(--accent)}
-.bullet-list li:last-child{border-bottom:none}
-.faq-item{border-bottom:1px solid var(--line);padding:20px 0}
-.faq-item:first-child{padding-top:0}
-.faq-q{font-size:1rem;font-weight:600;margin-bottom:8px}
-.faq-a{color:var(--mute);font-size:.9rem;line-height:1.7}
-.moment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px}
-.moment-card{border:1px solid var(--line);border-radius:14px;background:#0f0f0f;padding:24px}
-.moment-name{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;font-weight:700}
-.moment-card p{color:var(--mute);font-size:.88rem;line-height:1.65}
-.cta-band{border-top:1px solid var(--line);padding-top:56px;text-align:center}
-.cta-band .emotion{font-size:1.3rem;font-weight:700;margin-bottom:8px;line-height:1.4}
-.cta-band .emotion-sub{color:var(--mute);font-size:.95rem;margin-bottom:32px}
-.cta-band .cta-row{justify-content:center}
-.sub-cta{display:block;margin-top:16px;color:var(--mute);font-size:.85rem}
-.sub-cta a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
-.ecosystem{background:#0f0f0f;border:1px solid var(--line);border-radius:14px;padding:32px;text-align:center;margin-bottom:56px}
-.ecosystem p{color:var(--mute);font-size:.9rem;line-height:1.7;max-width:560px;margin:8px auto 0}
-footer{border-top:1px solid var(--line);margin-top:80px;padding-top:32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:.85rem;color:var(--mute)}
-footer a{color:var(--mute);transition:color .2s}
-footer a:hover{color:var(--ink)}
+:root{--paper:#E7E8E2;--panel:#DDDED7;--ink:#15181E;--ink-soft:#454A54;--line:#C4C6BD;--line-strong:#A6A99F;--white:#F4F5F0;--compression:#274A78;--tension:#BD3B22;--tick:#3E7FA4;--wrap:1180px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+.section{padding:96px 0;position:relative}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--tension);flex:none}
+h1,h2,h3{font-family:"Space Grotesk",sans-serif;font-weight:600;line-height:1.04;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,3.2vw,2.5rem);margin-bottom:18px}
+p{color:var(--ink-soft)}p strong{color:var(--ink);font-weight:600}
+.topbar{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(231,232,226,.86);backdrop-filter:blur(8px);z-index:50}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:.95rem;text-decoration:none}
+.back{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.06em;color:var(--ink-soft);text-decoration:none}.back:hover{color:var(--ink)}
+.hero{padding:84px 0 72px;border-bottom:1px solid var(--line);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.4rem);font-weight:700;margin:8px 0 24px}
+.hero h1 em{font-style:normal;color:var(--tension)}
+.hero .lede{font-size:1.12rem;max-width:31em;margin-bottom:34px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.btn{font-family:"IBM Plex Mono",monospace;font-size:.82rem;letter-spacing:.04em;text-decoration:none;padding:15px 26px;border:1px solid var(--ink);display:inline-flex;align-items:center;gap:10px;transition:.18s ease;background:var(--ink);color:var(--white)}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn--ghost{background:transparent;color:var(--ink)}.btn--ghost:hover{background:var(--ink);color:var(--white)}
+.btn .arrow{transition:transform .18s ease}.btn:hover .arrow{transform:translateX(3px)}
+.figure{width:100%;aspect-ratio:1/1}
+.fig{width:100%;height:100%;display:block}
+@keyframes ripple{0%{r:18;opacity:1}100%{r:150;opacity:0}}
+.fig .ring{transform-origin:center;animation:ripple 4s ease-out infinite}
+.fig .ring:nth-of-type(2){animation-delay:1.3s}
+.fig .ring:nth-of-type(3){animation-delay:2.6s}
+.fig-caption{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.08em;color:var(--ink-soft);text-transform:uppercase;margin-top:6px;text-align:right}
+.section--panel{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+.card{border:1px solid var(--line-strong);background:var(--paper);padding:30px 26px}
+.card .n{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.12em;color:var(--tension);margin-bottom:14px}
+.card h3{font-size:1.15rem;margin-bottom:10px}.card p{font-size:.94rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.split p{font-size:1.05rem;margin-bottom:16px}
+.os{border:1px solid var(--ink);box-shadow:6px 6px 0 var(--ink);background:var(--paper);padding:32px 30px}
+.os .k{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tension);margin-bottom:14px}
+.os li{list-style:none;padding:12px 0;border-top:1px solid var(--line);font-size:.94rem;color:var(--ink);display:flex;gap:12px}
+.os li::before{content:"○";color:var(--compression)}
+.foot{background:var(--ink);color:var(--paper);padding:84px 0 40px}
+.foot h2{color:var(--white)}.foot .eyebrow{color:#9aa0ab}.foot .eyebrow::before{background:var(--tension)}
+.connect{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:38px 0 56px}
+.connect a{text-decoration:none;border-top:1px solid #2c313b;padding-top:16px;display:block}
+.connect .k{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:#8a909b;margin-bottom:6px}
+.connect .v{font-family:"Space Grotesk",sans-serif;font-size:1.05rem;color:var(--white)}
+.connect a:hover .v{color:#cdd2da}
+.foot .legal{border-top:1px solid #2c313b;padding-top:24px;font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.05em;color:#8a909b;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:30px}.figure{max-width:360px;order:-1}.grid3{grid-template-columns:1fr}.split{grid-template-columns:1fr}.connect{grid-template-columns:1fr}.section{padding:68px 0}}
+@media(prefers-reduced-motion:reduce){.fig .ring{animation:none;opacity:.5}}
+:focus-visible{outline:2px solid var(--compression);outline-offset:3px}
 </style>
 </head>
 <body>
-<div class="wrap">
 
-<a href="https://texasmovement.com" class="back">&#8592; Texas Movement International</a>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="https://texasmovement.com">Texas Movement Social</a>
+  <a class="back mono" href="https://texasmovement.com">← TEXAS MOVEMENT INTERNATIONAL</a>
+</div></header>
 
-<!-- HERO -->
-<div class="eyebrow">Gather&#8482; by Texas Movement Social</div>
-<h1>Your moment deserves more than a checklist.</h1>
-<p class="lede">Gather&#8482; is a ceremony experience platform for weddings, births, and engagements&#8202;&#8212;&#8202;designed to make planning calmer, the day more present, and the memory sharper.</p>
-<p class="support-line">Built in Texas. Designed for modern families. Powered by Circle OS&#8482;.</p>
-<div class="cta-row">
-  <a href="mailto:gather@texasmovement.com?subject=Waitlist%20Request" class="btn-primary">Join the Private Waitlist</a>
-  <a href="mailto:gather@texasmovement.com?subject=Circle%20OS%20for%20Pros%20Access" class="btn-secondary">For Planners: Request Early Access</a>
-</div>
-
-<!-- WHAT GATHER IS -->
-<section>
-  <h2>What Gather Is</h2>
-  <p class="body-text">Gather is a new way to mark the moments that change your life. Not just a planning tool&#8202;&#8212;&#8202;a full experience layer that wraps around your ceremony before, during, and long after the day itself. We handle the coordination, the guest touchpoints, and the memory-keeping so that you can actually be present for what matters.</p>
-  <p class="body-text">Each Gather experience is shaped around named rituals and emotionally-aware design. Your guests don't just attend your ceremony&#8202;&#8212;&#8202;they participate in it, gently and meaningfully. No chaos. No dropped threads. No moment lost.</p>
-  <p class="body-text">Gather is powered by Circle OS&#8482;, our ceremony operating system that keeps the planning calm and the memories sharp. Circle OS runs quietly in the background so your experience stays fully human in the foreground.</p>
-</section>
-
-<!-- GATHER PRODUCT LINE -->
-<section>
-  <h2>The Gather&#8482; Experience Line</h2>
-  <p class="body-text">Gather comes in several forms, each built for a specific kind of milestone.</p>
-  <div class="card-grid">
-    <div class="card">
-      <div class="card-tag">Weddings</div>
-      <h3>Gather: Union&#8482;</h3>
-      <p>The full wedding ceremony experience. From pre-day planning to Echo&#8482; recap&#8202;&#8212;&#8202;every detail held with intention.</p>
-    </div>
-    <div class="card">
-      <div class="card-tag">Birth &amp; Baby</div>
-      <h3>Gather: Roots&#8482;</h3>
-      <p>Welcome a new life with presence and warmth. Designed for baby showers, birth announcements, and naming ceremonies.</p>
-    </div>
-    <div class="card">
-      <div class="card-tag">Engagements</div>
-      <h3>Gather: Threshold&#8482;</h3>
-      <p>Mark the beginning of yes. A curated experience for engagement celebrations that deserve more than a dinner reservation.</p>
-    </div>
-    <div class="card">
-      <div class="card-tag">Social-First</div>
-      <h3>Gather: Connected&#8482;</h3>
-      <p>For couples and families who want beautiful, shareable moments&#8202;&#8212;&#8202;without handing their day to a content crew.</p>
-    </div>
-    <div class="card">
-      <div class="card-tag">Elevated</div>
-      <h3>Gather: Reserve&#8482;</h3>
-      <p>Luxury ceremony experiences for those who want every detail considered and every moment handled.</p>
-    </div>
-    <div class="card">
-      <div class="card-tag">Private</div>
-      <h3>Gather: Close&#8482;</h3>
-      <p>Intimate, invite-only ceremonies. Small guest counts, high emotional presence, complete privacy.</p>
+<section class="hero"><div class="wrap">
+  <div>
+    <div class="eyebrow">Gather™ // Ceremony &amp; Experience</div>
+    <h1>The moments worth <em>gathering</em> for.</h1>
+    <p class="lede">Gather™ is the ceremony and experience platform for couples, families, and communities — a single system for designing, running, and remembering the moments that matter. Powered by Circle OS™.</p>
+    <div class="cta-row">
+      <a class="btn" href="mailto:movementconsultant@gmail.com?subject=Gather%20Early%20Access">Request early access <span class="arrow">→</span></a>
+      <a class="btn btn--ghost" href="#circle">How Circle OS works</a>
     </div>
   </div>
-</section>
+  <div><div class="figure">
+    <!-- SIGNATURE: Circle OS — concentric gathering rings rippling outward -->
+    <svg class="fig" viewBox="0 0 360 360" role="img" aria-label="Concentric rings expanding from a center point, representing a gathering radiating outward.">
+      <g class="frame">
+        <circle class="ring" cx="180" cy="180" r="18" fill="none" stroke="var(--compression)" stroke-width="1.6"/>
+        <circle class="ring" cx="180" cy="180" r="18" fill="none" stroke="var(--tension)" stroke-width="1.6"/>
+        <circle class="ring" cx="180" cy="180" r="18" fill="none" stroke="var(--compression)" stroke-width="1.6"/>
+        <!-- static structural rings -->
+        <circle cx="180" cy="180" r="60" fill="none" stroke="var(--line-strong)" stroke-width="1.2" stroke-dasharray="2 6"/>
+        <circle cx="180" cy="180" r="110" fill="none" stroke="var(--line-strong)" stroke-width="1.2" stroke-dasharray="2 6"/>
+        <!-- gathered nodes on the rings -->
+        <g fill="var(--paper)" stroke="var(--ink)" stroke-width="2">
+          <circle cx="180" cy="180" r="8"/>
+          <circle cx="240" cy="180" r="5"/><circle cx="150" cy="128" r="5"/><circle cx="138" cy="232" r="5"/>
+          <circle cx="180" cy="70" r="4.5"/><circle cx="278" cy="240" r="4.5"/><circle cx="86" cy="200" r="4.5"/>
+        </g>
+        <text x="180" y="350" text-anchor="middle" class="mono" font-size="9" fill="var(--ink-soft)">CIRCLE OS™</text>
+      </g>
+    </svg>
+    <div class="fig-caption">FIG. 04 — ONE CENTER, WIDENING CIRCLES</div>
+  </div></div>
+</div></section>
 
-<!-- FOR COUPLES & PARENTS -->
-<section>
-  <h2>For Couples &amp; Parents: Less Stress, More You</h2>
-  <p class="body-text">Planning a wedding or welcoming a baby should feel like one of the best seasons of your life&#8202;&#8212;&#8202;not the most exhausting. Gather is designed to lift the weight so you can feel the joy.</p>
-  <ul class="bullet-list">
-    <li><strong>Clarity from day one.</strong> Our planning assistant asks the right questions and builds a clear picture of your ceremony so nothing gets lost and no one drops the ball.</li>
-    <li><strong>Full presence on the day.</strong> Named rituals like Pause&#8482; and Blessing Circle are built to slow time down at the right moments so you actually feel what's happening.</li>
-    <li><strong>Memories that last.</strong> After the ceremony, your Echo&#8482; recap&#8202;&#8212;&#8202;photos, messages, and moments shaped into a short narrative&#8202;&#8212;&#8202;arrives as a gift you'll return to for years.</li>
-  </ul>
-  <p class="body-text" style="margin-top:24px">Here's how a Gather journey typically unfolds: You share your news&#8202;&#8212;&#8202;an engagement, a pregnancy, a wedding date&#8202;&#8212;&#8202;and join the waitlist. We reach out to learn about your vision and design your specific Gather experience together. On the day, our system supports the flow quietly while you stay in it fully. Afterward, your Echo&#8482; recap lands in your inbox like a keepsake you didn't have to plan for.</p>
-</section>
+<section class="section"><div class="wrap">
+  <div class="eyebrow">Gather™ // 01 — What It Is</div>
+  <h2>Every ceremony is a system. Gather runs it.</h2>
+  <p style="max-width:42em">A wedding, a memorial, a reunion, a community ritual — each one is a coordinated experience with people, timing, and meaning that have to hold together. Gather treats the ceremony as a system to be designed and run cleanly, so the people inside it can simply be present.</p>
+  <div class="grid3">
+    <div class="card"><div class="n">FOR COUPLES</div><h3>Ceremonies</h3><p>Design and run the day end to end — the flow, the people, the moments — without losing the meaning to logistics.</p></div>
+    <div class="card"><div class="n">FOR FAMILIES</div><h3>Milestones</h3><p>Reunions, memorials, and milestones held together with the same care, and remembered long after.</p></div>
+    <div class="card"><div class="n">FOR COMMUNITIES</div><h3>Rituals</h3><p>Recurring gatherings and community experiences, designed once and run again — at any scale.</p></div>
+  </div>
+</div></section>
 
-<!-- FOR PLANNERS & CREATORS -->
-<section>
-  <h2>For Planners &amp; Creators: Your Work, Elevated</h2>
-  <p class="body-text">Circle OS for Pros&#8482; gives professional planners, coordinators, and event creators access to the same operating system that powers Gather&#8202;&#8212;&#8202;built into your existing workflow, not replacing it.</p>
-  <ul class="bullet-list">
-    <li><strong>Cleaner workflows, fewer dropped balls.</strong> Guest touchpoints, ritual scheduling, and memory capture are handled by the system. You stay focused on the relationships and the room.</li>
-    <li><strong>Named rituals that make your brand look exceptional.</strong> Pause&#8482;, Echo&#8482;, Thread&#8482;, Blessing Circle&#8202;&#8212;&#8202;exclusive Gather moments that your clients will remember and talk about.</li>
-    <li><strong>You stay the hero.</strong> Circle OS runs quietly. Your clients experience your vision. The system just makes sure nothing slips.</li>
-  </ul>
-  <p class="body-text" style="margin-top:20px">Early access is limited. If you're a planner, coordinator, or creator who works with high-consideration milestones, apply now and we'll be in touch.</p>
-  <div class="cta-row" style="margin-bottom:0;margin-top:20px">
-    <a href="mailto:gather@texasmovement.com?subject=Circle%20OS%20for%20Pros%20Access" class="btn-secondary">Apply for Circle OS for Pros Early Access</a>
+<section id="circle" class="section section--panel"><div class="wrap">
+  <div class="eyebrow">Gather™ // 02 — The Engine</div>
+  <div class="split">
+    <div>
+      <h2>Powered by Circle OS™.</h2>
+      <p>Circle OS is the operating layer underneath Gather: one center, widening circles. It models who's at the heart of a moment and how it radiates outward — to the inner circle, the wider family, the whole community.</p>
+      <p><strong>Design the center once, and every circle stays in sync</strong> — invitations, roles, timing, and memory, all coordinated from a single source.</p>
+    </div>
+    <aside class="os">
+      <div class="k">Circle OS™ // Capabilities</div>
+      <ul style="list-style:none">
+        <li>Model the moment as concentric circles of people</li>
+        <li>Coordinate roles, timing, and flow from one place</li>
+        <li>Radiate updates outward without re-doing the work</li>
+        <li>Capture and keep the memory after the day ends</li>
+      </ul>
+    </aside>
   </div>
-</section>
+</div></section>
 
-<!-- SIGNATURE GATHER MOMENTS -->
-<section>
-  <h2>Signature Gather Moments</h2>
-  <p class="body-text">Gather isn't just logistics&#8202;&#8212;&#8202;it's built around named moments that create emotional anchors in your ceremony. These moments are exclusive to the Gather platform.</p>
-  <div class="moment-grid">
-    <div class="moment-card">
-      <div class="moment-name">Pause&#8482;</div>
-      <p>A short, intentional moment of silence held just before the ceremony begins. No music, no movement&#8202;&#8212;&#8202;just presence. It signals to everyone in the room that something real is about to happen.</p>
-    </div>
-    <div class="moment-card">
-      <div class="moment-name">Echo&#8482;</div>
-      <p>A post-ceremony recap that turns guest photos, shared messages, and recorded moments into a short film or narrative keepsake. Delivered within days of the event as a living memory you can share or keep private.</p>
-    </div>
-    <div class="moment-card">
-      <div class="moment-name">Blessing Circle</div>
-      <p>A structured moment where guests share a wish, hope, or memory with the couple or family&#8202;&#8212;&#8202;without the pressure of public speaking. Warm, comfortable, and always meaningful.</p>
-    </div>
-    <div class="moment-card">
-      <div class="moment-name">Thread&#8482;</div>
-      <p>A living thread of guest messages collected before and after the ceremony. It becomes a digital heirloom that grows over time&#8202;&#8212;&#8202;first-year anniversary notes, milestone check-ins, and more.</p>
-    </div>
-    <div class="moment-card">
-      <div class="moment-name">Question Stone</div>
-      <p>Guests receive a single, beautifully framed question to reflect on during the event. Their responses become part of the Echo&#8482; recap and ceremony keepsake. Thoughtful participation without awkward ice-breakers.</p>
-    </div>
-    <div class="moment-card">
-      <div class="moment-name">Letter Loop</div>
-      <p>A structured exchange where the couple or family writes personal letters&#8202;&#8212;&#8202;to each other, to their child, to their future selves&#8202;&#8212;&#8202;sealed and delivered at a future milestone. A promise made tangible.</p>
-    </div>
+<footer class="foot"><div class="wrap">
+  <div class="eyebrow">Gather™ // Connect</div>
+  <h2>Be first to gather.</h2>
+  <div class="connect">
+    <a href="mailto:movementconsultant@gmail.com?subject=Gather%20Early%20Access"><div class="k">Early access</div><div class="v">Request an invite</div></a>
+    <a href="https://www.linkedin.com/in/alexandermathai/"><div class="k">LinkedIn</div><div class="v">Alexander Mathai</div></a>
+    <a href="https://texasmovement.com"><div class="k">Network</div><div class="v">texasmovement.com</div></a>
   </div>
-</section>
+  <div class="legal">
+    <span>© Texas Movement Social — Gather™ &amp; Circle OS™ · Part of Texas Movement International</span>
+    <span>ONE CENTER, WIDENING CIRCLES</span>
+  </div>
+</div></footer>
 
-<!-- HOW IT WORKS -->
-<section>
-  <h2>How It Works</h2>
-  <div class="steps">
-    <div class="step">
-      <div class="step-num">01</div>
-      <h3>Apply &amp; Share</h3>
-      <p>Join the waitlist and tell us what you're celebrating. We'll reach out with a short intake conversation to understand your vision, your people, and what matters most to you.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">02</div>
-      <h3>We Design Your Experience</h3>
-      <p>Working with our planning assistant and team, we shape your Gather experience&#8202;&#8212;&#8202;selecting rituals, structuring the guest journey, and making sure every moving part has a home.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">03</div>
-      <h3>Celebrate &amp; Receive</h3>
-      <p>You show up and be present. We support the day quietly in the background. Within days, your Echo&#8482; recap arrives&#8202;&#8212;&#8202;a finished memory you didn't have to make yourself.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section>
-  <h2>Questions We Hear Often</h2>
-  <div class="faq-item">
-    <div class="faq-q">Is this just another planning app?</div>
-    <div class="faq-a">Gather is not a task manager or a vendor directory. It's a full ceremony experience layer&#8202;&#8212;&#8202;built around emotional design, named rituals, and memory capture&#8202;&#8212;&#8202;that wraps around your milestone from planning through the aftermath. Think of it less like software and more like a thoughtful co-designer.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q">Do I have to be very online or on every social platform?</div>
-    <div class="faq-a">Not at all. Gather is designed to be as private or as shareable as you choose. You control what gets captured, what gets shared, and who sees it. Some families use Gather for a completely private ceremony with zero social output. Others use Gather: Connected&#8482; to create beautiful, intentional content. Both are fully supported.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q">Can I use Gather if I already have a planner or venue?</div>
-    <div class="faq-a">Yes&#8202;&#8212;&#8202;Gather is designed to work alongside your existing planner and venue, not replace them. Circle OS&#8482; integrates into whatever structure is already in place. If you're a planner, ask about Circle OS for Pros&#8482; for a deeper integration layer.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q">What about privacy and guest data?</div>
-    <div class="faq-a">We take this seriously. Guest information is used only to support your ceremony experience and is never sold, shared, or used for marketing. Your Echo&#8482; recap and Thread&#8482; archive belong to you. We don't use your ceremony content for any purpose beyond delivering your experience.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q">Where is Gather available right now?</div>
-    <div class="faq-a">Gather is currently in private beta, with capacity limited to a small number of ceremonies during our launch period. We're based in Texas and serving families across the US. Join the waitlist to be considered for early access&#8202;&#8212;&#8202;we'll reach out when a spot opens that matches your timeline.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q">How much does this cost, roughly?</div>
-    <div class="faq-a">Gather experiences are priced based on the level of support, the size of your ceremony, and which product line fits your milestone. Pricing starts at an accessible tier for smaller, more intimate ceremonies and scales from there. We'll share full pricing during your intake conversation after you join the waitlist.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q">Can my family handle this if they're not tech-savvy?</div>
-    <div class="faq-a">Absolutely. Gather is designed with non-technical guests in mind. Guest participation happens through simple, familiar formats&#8202;&#8212;&#8202;no apps to download, no accounts to create. If a guest can send a text or click a link, they can participate fully in every Gather moment.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q">Is this only for weddings?</div>
-    <div class="faq-a">No&#8202;&#8212;&#8202;while Gather: Union&#8482; is built specifically for weddings, the broader Gather line serves engagements, births, naming ceremonies, and any milestone that deserves more than a party. If you're marking something that changed your life, Gather was built for it.</div>
-  </div>
-</section>
-
-<!-- ECOSYSTEM -->
-<div class="ecosystem">
-  <div class="eyebrow">Texas Movement International</div>
-  <p>Texas Movement Social and Gather&#8482; are part of the TMI ecosystem&#8202;&#8212;&#8202;a network of mission-driven companies building systems for people who move through life intentionally. <a href="https://texasmovement.com" style="color:var(--accent);">Explore the full ecosystem &#8594;</a></p>
-</div>
-
-<!-- FINAL CTA BAND -->
-<div class="cta-band">
-  <div class="emotion">You only cross this moment once.</div>
-  <div class="emotion-sub">Make it feel like you.</div>
-  <div class="cta-row">
-    <a href="mailto:gather@texasmovement.com?subject=Waitlist%20Request" class="btn-primary">Join the Private Waitlist</a>
-    <a href="mailto:gather@texasmovement.com?subject=Circle%20OS%20for%20Pros%20Access" class="btn-secondary">For Planners: Request Early Access</a>
-  </div>
-</div>
-
-<footer>
-  <span>&#169; 2025 Texas Movement Social. Part of Texas Movement International.</span>
-  <a href="https://texasmovement.com">texasmovement.com</a>
-</footer>
-
-</div>
 </body>
 </html>
