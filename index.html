@@ -1,159 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Texas Movement Social — Gather™, powered by Circle OS™</title>
-<meta name="description" content="Gather™ is the ceremony and experience platform for couples, families, and communities — powered by Circle OS™. Part of Texas Movement International.">
-<meta property="og:title" content="Texas Movement Social — Gather™">
-<meta property="og:description" content="The ceremony and experience platform for couples, families, and communities.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://social.texasmovement.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{--paper:#E7E8E2;--panel:#DDDED7;--ink:#15181E;--ink-soft:#454A54;--line:#C4C6BD;--line-strong:#A6A99F;--white:#F4F5F0;--compression:#274A78;--tension:#BD3B22;--tick:#3E7FA4;--wrap:1180px}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit}.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
-.section{padding:96px 0;position:relative}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);display:flex;align-items:center;gap:12px;margin-bottom:22px}
-.eyebrow::before{content:"";width:34px;height:1px;background:var(--tension);flex:none}
-h1,h2,h3{font-family:"Space Grotesk",sans-serif;font-weight:600;line-height:1.04;letter-spacing:-.01em}
-h2{font-size:clamp(1.7rem,3.2vw,2.5rem);margin-bottom:18px}
-p{color:var(--ink-soft)}p strong{color:var(--ink);font-weight:600}
-.topbar{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(231,232,226,.86);backdrop-filter:blur(8px);z-index:50}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
-.brand{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:.95rem;text-decoration:none}
-.back{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.06em;color:var(--ink-soft);text-decoration:none}.back:hover{color:var(--ink)}
-.hero{padding:84px 0 72px;border-bottom:1px solid var(--line);overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center}
-.hero h1{font-size:clamp(2.5rem,5.6vw,4.4rem);font-weight:700;margin:8px 0 24px}
-.hero h1 em{font-style:normal;color:var(--tension)}
-.hero .lede{font-size:1.12rem;max-width:31em;margin-bottom:34px}
-.cta-row{display:flex;flex-wrap:wrap;gap:14px}
-.btn{font-family:"IBM Plex Mono",monospace;font-size:.82rem;letter-spacing:.04em;text-decoration:none;padding:15px 26px;border:1px solid var(--ink);display:inline-flex;align-items:center;gap:10px;transition:.18s ease;background:var(--ink);color:var(--white)}
-.btn:hover{background:transparent;color:var(--ink)}
-.btn--ghost{background:transparent;color:var(--ink)}.btn--ghost:hover{background:var(--ink);color:var(--white)}
-.btn .arrow{transition:transform .18s ease}.btn:hover .arrow{transform:translateX(3px)}
-.figure{width:100%;aspect-ratio:1/1}
-.fig{width:100%;height:100%;display:block}
-@keyframes ripple{0%{r:18;opacity:1}100%{r:150;opacity:0}}
-.fig .ring{transform-origin:center;animation:ripple 4s ease-out infinite}
-.fig .ring:nth-of-type(2){animation-delay:1.3s}
-.fig .ring:nth-of-type(3){animation-delay:2.6s}
-.fig-caption{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.08em;color:var(--ink-soft);text-transform:uppercase;margin-top:6px;text-align:right}
-.section--panel{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
-.card{border:1px solid var(--line-strong);background:var(--paper);padding:30px 26px}
-.card .n{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.12em;color:var(--tension);margin-bottom:14px}
-.card h3{font-size:1.15rem;margin-bottom:10px}.card p{font-size:.94rem}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.split p{font-size:1.05rem;margin-bottom:16px}
-.os{border:1px solid var(--ink);box-shadow:6px 6px 0 var(--ink);background:var(--paper);padding:32px 30px}
-.os .k{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tension);margin-bottom:14px}
-.os li{list-style:none;padding:12px 0;border-top:1px solid var(--line);font-size:.94rem;color:var(--ink);display:flex;gap:12px}
-.os li::before{content:"○";color:var(--compression)}
-.foot{background:var(--ink);color:var(--paper);padding:84px 0 40px}
-.foot h2{color:var(--white)}.foot .eyebrow{color:#9aa0ab}.foot .eyebrow::before{background:var(--tension)}
-.connect{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:38px 0 56px}
-.connect a{text-decoration:none;border-top:1px solid #2c313b;padding-top:16px;display:block}
-.connect .k{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:#8a909b;margin-bottom:6px}
-.connect .v{font-family:"Space Grotesk",sans-serif;font-size:1.05rem;color:var(--white)}
-.connect a:hover .v{color:#cdd2da}
-.foot .legal{border-top:1px solid #2c313b;padding-top:24px;font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.05em;color:#8a909b;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:30px}.figure{max-width:360px;order:-1}.grid3{grid-template-columns:1fr}.split{grid-template-columns:1fr}.connect{grid-template-columns:1fr}.section{padding:68px 0}}
-@media(prefers-reduced-motion:reduce){.fig .ring{animation:none;opacity:.5}}
-:focus-visible{outline:2px solid var(--compression);outline-offset:3px}
-</style>
+  <meta charset="UTF-8">
+  <title>Texas Movement Social — Gather™, powered by Circle OS™</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary description -->
+  <meta name="description" content="Gather™ is the ceremony and experience platform for couples, families, and communities — a single system for designing, running, and remembering the moments that matter. Powered by Circle OS™.">
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#15181E">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Texas Movement Social">
+  <meta property="og:title" content="Gather™ — Ceremony &amp; Experience, powered by Circle OS™">
+  <meta property="og:description" content="The ceremony and experience platform for couples, families, and communities — one system for designing, running, and remembering the moments that matter. Powered by Circle OS™.">
+  <meta property="og:url" content="https://social.texasmovement.com">
+  <meta property="og:image" content="https://social.texasmovement.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Gather™ by Texas Movement Social — ceremony and experience, powered by Circle OS™.">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gather™ — Ceremony &amp; Experience, powered by Circle OS™">
+  <meta name="twitter:description" content="Ceremonies, milestones, and rituals run as systems — so the people inside them can be fully present. Powered by Circle OS™.">
+  <meta name="twitter:image" content="https://social.texasmovement.com/og-image.png">
+  <meta name="twitter:image:alt" content="Gather™ by Texas Movement Social — ceremony and experience, powered by Circle OS™.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --paper:#E7E8E2;
+      --panel:#DDDED7;
+      --ink:#15181E;
+      --ink-soft:#454A54;
+      --line:#C4C6BD;
+      --line-strong:#A6A99F;
+      --white:#F4F5F0;
+      --compression:#274A78;
+      --tension:#BD3B22;
+      --tick:#3E7FA4;
+      --wrap:1180px
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{
+      background:var(--paper);
+      color:var(--ink);
+      font-family:"IBM Plex Sans",system-ui,sans-serif;
+      font-size:17px;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased
+    }
+    a{color:inherit;text-decoration:none}
+    .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+    .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+    .section{padding:96px 0;position:relative}
+    .eyebrow{
+      font-family:"IBM Plex Mono",monospace;
+      font-size:.72rem;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      color:var(--ink-soft);
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:22px
+    }
+    .eyebrow::before{
+      content:"";
+      width:34px;
+      height:1px;
+      background:var(--tension);
+      flex:none
+    }
+    h1,h2,h3{
+      font-family:"Space Grotesk",sans-serif;
+      font-weight:600;
+      line-height:1.04;
+      letter-spacing:-.01em
+    }
+    h2{font-size:clamp(1.7rem,3.2vw,2.5rem);margin-bottom:18px}
+    p{color:var(--ink-soft)}
+    p strong{color:var(--ink);font-weight:600}
+    .topbar{
+      border-bottom:1px solid var(--line);
+      position:sticky;
+      top:0;
+      background:rgba(231,232,226,.86);
+      backdrop-filter:blur(8px);
+      z-index:50
+    }
+    .topbar .wrap{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:58px
+    }
+    .brand{
+      font-family:"Space Grotesk",sans-serif;
+      font-weight:600;
+      font-size:.95rem;
+      text-decoration:none
+    }
+    .back{
+      font-family:"IBM Plex Mono",monospace;
+      font-size:.72rem;
+      letter-spacing:.06em;
+      color:var(--ink-soft);
+      text-decoration:none
+    }
+    .back:hover{color:var(--ink)}
+    .hero{
+      padding:84px 0 72px;
+      border-bottom:1px solid var(--line);
+      overflow:hidden
+    }
+    .hero .wrap{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:54px;
+      align-items:center
+    }
+    .hero h1{
+      font-size:clamp(2.5rem,5.6vw,4.4rem);
+      font-weight:700;
+      margin:8px 0 24px
+    }
+    .hero h1 em{font-style:normal;color:var(--tension)}
+    .hero .lede{
+      font-size:1.12rem;
+      max-width:31em;
+      margin-bottom:34px
+    }
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px
+    }
+    .btn{
+      font-family:"IBM Plex Mono",monospace;
+      font-size:.82rem;
+      letter-spacing:.04em;
+      text-decoration:none;
+      padding:15px 26px;
+      border:1px solid var(--ink);
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      transition:.18s ease;
+      background:var(--ink);
+      color:var(--white)
+    }
+    .btn:hover{background:transparent;color:var(--ink)}
+    .btn--ghost{background:transparent;color:var(--ink)}
+    .btn--ghost:hover{background:var(--ink);color:var(--white)}
+    .btn .arrow{transition:transform .18s ease}
+    .btn:hover .arrow{transform:translateX(3px)}
+    .figure{width:100%;aspect-ratio:1/1}
+    .fig{width:100%;height:100%;display:block}
+    @keyframes ripple{
+      0%{r:18;opacity:1}
+      100%{r:150;opacity:0}
+    }
+    .fig .ring{transform-origin:center;animation:ripple 4s ease-out infinite}
+    .fig .ring:nth-of-type(2){animation-delay:1.3s}
+    .fig .ring:nth-of-type(3){animation-delay:2.6s}
+    .fig-caption{
+      font-family:"IBM Plex Mono",monospace;
+      font-size:.66rem;
+      letter-spacing:.08em;
+      color:var(--ink-soft);
+      text-transform:uppercase;
+      margin-top:6px;
+      text-align:right
+    }
+    .section--panel{
+      background:var(--panel);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line)
+    }
+    .grid3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:42px
+    }
+    .card{
+      border:1px solid var(--line-strong);
+      background:var(--paper);
+      padding:30px 26px
+    }
+    .card .n{
+      font-family:"IBM Plex Mono",monospace;
+      font-size:.66rem;
+      letter-spacing:.12em;
+      color:var(--tension);
+      margin-bottom:14px
+    }
+    .card h3{font-size:1.15rem;margin-bottom:10px}
+    .card p{font-size:.94rem}
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:48px;
+      align-items:center
+    }
+    .split p{font-size:1.05rem;margin-bottom:16px}
+    .os{
+      border:1px solid var(--ink);
+      box-shadow:6px 6px 0 var(--ink);
+      background:var(--paper);
+      padding:32px 30px
+    }
+    .os .k{
+      font-family:"IBM Plex Mono",monospace;
+      font-size:.66rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--tension);
+      margin-bottom:14px
+    }
+    .os ul{margin-top:4px}
+    .os li{
+      list-style:none;
+      padding:12px 0;
+      border-top:1px solid var(--line);
+      font-size:.94rem;
+      color:var(--ink);
+      display:flex;
+      gap:12px
+    }
+    .os li::before{
+      content:"○";
+      color:var(--compression)
+    }
+    .foot{
+      background:var(--ink);
+      color:var(--paper);
+      padding:84px 0 40px
+    }
+    .foot h2{color:var(--white)}
+    .foot .eyebrow{color:#9aa0ab}
+    .foot .eyebrow::before{background:var(--tension)}
+    .connect{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+      margin:38px 0 56px
+    }
+    .connect a{
+      text-decoration:none;
+      border-top:1px solid #2c313b;
+      padding-top:16px;
+      display:block
+    }
+    .connect .k{
+      font-family:"IBM Plex Mono",monospace;
+      font-size:.66rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:#8a909b;
+      margin-bottom:6px
+    }
+    .connect .v{
+      font-family:"Space Grotesk",sans-serif;
+      font-size:1.05rem;
+      color:var(--white)
+    }
+    .connect a:hover .v{color:#cdd2da}
+    .foot .legal{
+      border-top:1px solid #2c313b;
+      padding-top:24px;
+      font-family:"IBM Plex Mono",monospace;
+      font-size:.7rem;
+      letter-spacing:.05em;
+      color:#8a909b;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:12px
+    }
+    @media(max-width:900px){
+      .hero .wrap{grid-template-columns:1fr;gap:30px}
+      .figure{max-width:360px;order:-1}
+      .grid3{grid-template-columns:1fr}
+      .split{grid-template-columns:1fr}
+      .connect{grid-template-columns:1fr}
+      .section{padding:68px 0}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .fig .ring{animation:none;opacity:.5}
+      html{scroll-behavior:auto}
+    }
+    :focus-visible{outline:2px solid var(--compression);outline-offset:3px}
+  </style>
 </head>
 <body>
 
-<header class="topbar"><div class="wrap">
-  <a class="brand" href="https://texasmovement.com">Texas Movement Social</a>
-  <a class="back mono" href="https://texasmovement.com">← TEXAS MOVEMENT INTERNATIONAL</a>
-</div></header>
+<header class="topbar">
+  <div class="wrap">
+    <a href="https://texasmovement.com" class="brand">Texas Movement Social — Gather™</a>
+    <a href="https://texasmovement.com" class="back">← Texas Movement International</a>
+  </div>
+</header>
 
-<section class="hero"><div class="wrap">
-  <div>
-    <div class="eyebrow">Gather™ // Ceremony &amp; Experience</div>
-    <h1>The moments worth <em>gathering</em> for.</h1>
-    <p class="lede">Gather™ is the ceremony and experience platform for couples, families, and communities — a single system for designing, running, and remembering the moments that matter. Powered by Circle OS™.</p>
-    <div class="cta-row">
-      <a class="btn" href="mailto:movementconsultant@gmail.com?subject=Gather%20Early%20Access">Request early access <span class="arrow">→</span></a>
-      <a class="btn btn--ghost" href="#circle">How Circle OS works</a>
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Gather™ // Ceremony &amp; Experience</div>
+        <h1>The moments worth <em>gathering</em> for.</h1>
+        <p class="lede">
+          Gather™ is the ceremony and experience platform for couples, families, and communities — a single system for designing, running, and remembering the moments that matter. Powered by Circle OS™.
+        </p>
+        <div class="cta-row">
+          <a class="btn" href="mailto:movementconsultant@gmail.com?subject=Gather%20Early%20Access">
+            Request early access <span class="arrow">→</span>
+          </a>
+          <a class="btn btn--ghost" href="#circle">
+            How Circle OS works <span class="arrow">↓</span>
+          </a>
+        </div>
+      </div>
+
+      <aside class="figure">
+        <svg class="fig" viewBox="0 0 300 300" role="img" aria-labelledby="circle-os-title">
+          <title id="circle-os-title">CIRCLE OS — One center, widening circles</title>
+          <defs>
+            <radialGradient id="grad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#274A78" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#274A78" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="150" cy="150" r="26" fill="var(--ink)"/>
+          <circle cx="150" cy="150" r="18" fill="none" stroke="#F4F5F0" stroke-width="2"/>
+          <circle class="ring" cx="150" cy="150" r="60" fill="none" stroke="url(#grad)" stroke-width="1.5"/>
+          <circle class="ring" cx="150" cy="150" r="100" fill="none" stroke="url(#grad)" stroke-width="1.5"/>
+          <circle class="ring" cx="150" cy="150" r="140" fill="none" stroke="url(#grad)" stroke-width="1.5"/>
+          <circle cx="150" cy="150" r="4" fill="#BD3B22"/>
+        </svg>
+        <div class="fig-caption">FIG. 04 — ONE CENTER, WIDENING CIRCLES · CIRCLE OS™</div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--panel">
+    <div class="wrap">
+      <div class="eyebrow">Gather™ // 01 — What It Is</div>
+      <h2>Every ceremony is a system. Gather runs it.</h2>
+      <p>
+        A wedding, a memorial, a reunion, a community ritual — each one is a coordinated experience with people, timing, and meaning that have to hold together. Gather treats the ceremony as a system to be designed and run cleanly, so the people inside it can simply be present.
+      </p>
+
+      <div class="grid3">
+        <article class="card">
+          <div class="n mono">FOR COUPLES</div>
+          <h3>Ceremonies</h3>
+          <p>Design and run the day end to end — the flow, the people, the moments — without losing the meaning to logistics.</p>
+        </article>
+        <article class="card">
+          <div class="n mono">FOR FAMILIES</div>
+          <h3>Milestones</h3>
+          <p>Reunions, memorials, and milestones held together with the same care, and remembered long after.</p>
+        </article>
+        <article class="card">
+          <div class="n mono">FOR COMMUNITIES</div>
+          <h3>Rituals</h3>
+          <p>Recurring gatherings and community experiences, designed once and run again — at any scale.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="circle" class="section">
+    <div class="wrap split">
+      <div>
+        <div class="eyebrow">Gather™ // 02 — The Engine</div>
+        <h2>Powered by Circle OS™.</h2>
+        <p>
+          Circle OS is the operating layer underneath Gather: one center, widening circles. It models who's at the heart of a moment and how it radiates outward — to the inner circle, the wider family, the whole community.
+        </p>
+        <p>
+          <strong>Design the center once, and every circle stays in sync</strong> — invitations, roles, timing, and memory, all coordinated from a single source.
+        </p>
+      </div>
+      <aside class="os">
+        <div class="k">Circle OS™ // Capabilities</div>
+        <ul>
+          <li>Model the moment as concentric circles of people.</li>
+          <li>Coordinate roles, timing, and flow from one place.</li>
+          <li>Radiate updates outward without re-doing the work.</li>
+          <li>Capture and keep the memory after the day ends.</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="eyebrow">Gather™ // Connect</div>
+    <h2>Be first to gather.</h2>
+    <div class="connect">
+      <a href="mailto:movementconsultant@gmail.com?subject=Gather%20Early%20Access">
+        <div class="k">Early access</div>
+        <div class="v">Request an invite</div>
+      </a>
+      <a href="https://www.linkedin.com/in/alexandermathai/">
+        <div class="k">LinkedIn</div>
+        <div class="v">Alexander Mathai</div>
+      </a>
+      <a href="https://texasmovement.com">
+        <div class="k">Network</div>
+        <div class="v">texasmovement.com</div>
+      </a>
+    </div>
+    <div class="legal">
+      <span>© Texas Movement Social — Gather™ &amp; Circle OS™ · Part of Texas Movement International</span>
+      <span>ONE CENTER, WIDENING CIRCLES</span>
     </div>
   </div>
-  <div><div class="figure">
-    <!-- SIGNATURE: Circle OS — concentric gathering rings rippling outward -->
-    <svg class="fig" viewBox="0 0 360 360" role="img" aria-label="Concentric rings expanding from a center point, representing a gathering radiating outward.">
-      <g class="frame">
-        <circle class="ring" cx="180" cy="180" r="18" fill="none" stroke="var(--compression)" stroke-width="1.6"/>
-        <circle class="ring" cx="180" cy="180" r="18" fill="none" stroke="var(--tension)" stroke-width="1.6"/>
-        <circle class="ring" cx="180" cy="180" r="18" fill="none" stroke="var(--compression)" stroke-width="1.6"/>
-        <!-- static structural rings -->
-        <circle cx="180" cy="180" r="60" fill="none" stroke="var(--line-strong)" stroke-width="1.2" stroke-dasharray="2 6"/>
-        <circle cx="180" cy="180" r="110" fill="none" stroke="var(--line-strong)" stroke-width="1.2" stroke-dasharray="2 6"/>
-        <!-- gathered nodes on the rings -->
-        <g fill="var(--paper)" stroke="var(--ink)" stroke-width="2">
-          <circle cx="180" cy="180" r="8"/>
-          <circle cx="240" cy="180" r="5"/><circle cx="150" cy="128" r="5"/><circle cx="138" cy="232" r="5"/>
-          <circle cx="180" cy="70" r="4.5"/><circle cx="278" cy="240" r="4.5"/><circle cx="86" cy="200" r="4.5"/>
-        </g>
-        <text x="180" y="350" text-anchor="middle" class="mono" font-size="9" fill="var(--ink-soft)">CIRCLE OS™</text>
-      </g>
-    </svg>
-    <div class="fig-caption">FIG. 04 — ONE CENTER, WIDENING CIRCLES</div>
-  </div></div>
-</div></section>
-
-<section class="section"><div class="wrap">
-  <div class="eyebrow">Gather™ // 01 — What It Is</div>
-  <h2>Every ceremony is a system. Gather runs it.</h2>
-  <p style="max-width:42em">A wedding, a memorial, a reunion, a community ritual — each one is a coordinated experience with people, timing, and meaning that have to hold together. Gather treats the ceremony as a system to be designed and run cleanly, so the people inside it can simply be present.</p>
-  <div class="grid3">
-    <div class="card"><div class="n">FOR COUPLES</div><h3>Ceremonies</h3><p>Design and run the day end to end — the flow, the people, the moments — without losing the meaning to logistics.</p></div>
-    <div class="card"><div class="n">FOR FAMILIES</div><h3>Milestones</h3><p>Reunions, memorials, and milestones held together with the same care, and remembered long after.</p></div>
-    <div class="card"><div class="n">FOR COMMUNITIES</div><h3>Rituals</h3><p>Recurring gatherings and community experiences, designed once and run again — at any scale.</p></div>
-  </div>
-</div></section>
-
-<section id="circle" class="section section--panel"><div class="wrap">
-  <div class="eyebrow">Gather™ // 02 — The Engine</div>
-  <div class="split">
-    <div>
-      <h2>Powered by Circle OS™.</h2>
-      <p>Circle OS is the operating layer underneath Gather: one center, widening circles. It models who's at the heart of a moment and how it radiates outward — to the inner circle, the wider family, the whole community.</p>
-      <p><strong>Design the center once, and every circle stays in sync</strong> — invitations, roles, timing, and memory, all coordinated from a single source.</p>
-    </div>
-    <aside class="os">
-      <div class="k">Circle OS™ // Capabilities</div>
-      <ul style="list-style:none">
-        <li>Model the moment as concentric circles of people</li>
-        <li>Coordinate roles, timing, and flow from one place</li>
-        <li>Radiate updates outward without re-doing the work</li>
-        <li>Capture and keep the memory after the day ends</li>
-      </ul>
-    </aside>
-  </div>
-</div></section>
-
-<footer class="foot"><div class="wrap">
-  <div class="eyebrow">Gather™ // Connect</div>
-  <h2>Be first to gather.</h2>
-  <div class="connect">
-    <a href="mailto:movementconsultant@gmail.com?subject=Gather%20Early%20Access"><div class="k">Early access</div><div class="v">Request an invite</div></a>
-    <a href="https://www.linkedin.com/in/alexandermathai/"><div class="k">LinkedIn</div><div class="v">Alexander Mathai</div></a>
-    <a href="https://texasmovement.com"><div class="k">Network</div><div class="v">texasmovement.com</div></a>
-  </div>
-  <div class="legal">
-    <span>© Texas Movement Social — Gather™ &amp; Circle OS™ · Part of Texas Movement International</span>
-    <span>ONE CENTER, WIDENING CIRCLES</span>
-  </div>
-</div></footer>
+</footer>
 
 </body>
 </html>
