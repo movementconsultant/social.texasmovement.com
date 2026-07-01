@@ -1,434 +1,606 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Texas Movement Social — Gather™, powered by Circle OS™</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Texas Movement Social — Where the system shows up in public.</title>
+    <meta
+      name="description"
+      content="Texas Movement Social is the public layer of Texas Movement. Follow the work across platforms, see live gatherings through Gather, and engage on clear terms."
+    />
+    <link rel="canonical" href="https://social.texasmovement.com" />
 
-  <!-- Primary description -->
-  <meta name="description" content="Gather™ is the ceremony and experience platform for couples, families, and communities — a single system for designing, running, and remembering the moments that matter. Powered by Circle OS™.">
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Texas Movement Social — Where the system shows up in public."
+    />
+    <meta
+      property="og:description"
+      content="The social layer for Texas Movement: follow the work across platforms, see live gatherings via Gather, and understand how to engage with the ecosystem."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://social.texasmovement.com" />
+    <meta property="og:image" content="/og-texas-movement-social.png" />
+    <meta property="og:site_name" content="Texas Movement Social" />
 
-  <!-- Theme color -->
-  <meta name="theme-color" content="#15181E">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Texas Movement Social — Where the system shows up in public."
+    />
+    <meta
+      name="twitter:description"
+      content="Follow by lane, see Gather events, and read updates and norms for engaging with Texas Movement in public."
+    />
+    <meta name="twitter:image" content="/og-texas-movement-social.png" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Texas Movement Social">
-  <meta property="og:title" content="Gather™ — Ceremony &amp; Experience, powered by Circle OS™">
-  <meta property="og:description" content="The ceremony and experience platform for couples, families, and communities — one system for designing, running, and remembering the moments that matter. Powered by Circle OS™.">
-  <meta property="og:url" content="https://social.texasmovement.com">
-  <meta property="og:image" content="https://social.texasmovement.com/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="Gather™ by Texas Movement Social — ceremony and experience, powered by Circle OS™.">
+    <!-- JSON-LD (public layer, accounts organized by lane) [file:153] -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://social.texasmovement.com#org",
+        "name": "Texas Movement Social",
+        "url": "https://social.texasmovement.com",
+        "parentOrganization": {
+          "@type": "Organization",
+          "@id": "https://texasmovement.com#org",
+          "name": "Texas Movement International"
+        },
+        "founder": {
+          "@type": "Person",
+          "@id": "https://alexandermathai.com/person",
+          "name": "Alexander Mathai"
+        },
+        "sameAs": [
+          "https://texasmovement.com"
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://social.texasmovement.com#website",
+        "url": "https://social.texasmovement.com",
+        "name": "Texas Movement Social",
+        "publisher": {
+          "@id": "https://social.texasmovement.com#org"
+        }
+      }
+    </script>
+    <!-- You can extend this with an ItemList of social profiles grouped by lane once you finalize links. [file:153] -->
 
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Gather™ — Ceremony &amp; Experience, powered by Circle OS™">
-  <meta name="twitter:description" content="Ceremonies, milestones, and rituals run as systems — so the people inside them can be fully present. Powered by Circle OS™.">
-  <meta name="twitter:image" content="https://social.texasmovement.com/og-image.png">
-  <meta name="twitter:image:alt" content="Gather™ by Texas Movement Social — ceremony and experience, powered by Circle OS™.">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #020617;
+        --fg-primary: #e2e8f0;
+        --fg-secondary: #cbd5e1;
+        --fg-muted: #94a3b8;
+        --border-soft: rgba(148, 163, 184, 0.25);
+        --border-card: rgba(148, 163, 184, 0.22);
+        --accent: #38bdf8;
+      }
 
-  <style>
-    :root{
-      --paper:#E7E8E2;
-      --panel:#DDDED7;
-      --ink:#15181E;
-      --ink-soft:#454A54;
-      --line:#C4C6BD;
-      --line-strong:#A6A99F;
-      --white:#F4F5F0;
-      --compression:#274A78;
-      --tension:#BD3B22;
-      --tick:#3E7FA4;
-      --wrap:1180px
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-    body{
-      background:var(--paper);
-      color:var(--ink);
-      font-family:"IBM Plex Sans",system-ui,sans-serif;
-      font-size:17px;
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased
-    }
-    a{color:inherit;text-decoration:none}
-    .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
-    .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
-    .section{padding:96px 0;position:relative}
-    .eyebrow{
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.72rem;
-      letter-spacing:.2em;
-      text-transform:uppercase;
-      color:var(--ink-soft);
-      display:flex;
-      align-items:center;
-      gap:12px;
-      margin-bottom:22px
-    }
-    .eyebrow::before{
-      content:"";
-      width:34px;
-      height:1px;
-      background:var(--tension);
-      flex:none
-    }
-    h1,h2,h3{
-      font-family:"Space Grotesk",sans-serif;
-      font-weight:600;
-      line-height:1.04;
-      letter-spacing:-.01em
-    }
-    h2{font-size:clamp(1.7rem,3.2vw,2.5rem);margin-bottom:18px}
-    p{color:var(--ink-soft)}
-    p strong{color:var(--ink);font-weight:600}
-    .topbar{
-      border-bottom:1px solid var(--line);
-      position:sticky;
-      top:0;
-      background:rgba(231,232,226,.86);
-      backdrop-filter:blur(8px);
-      z-index:50
-    }
-    .topbar .wrap{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      height:58px
-    }
-    .brand{
-      font-family:"Space Grotesk",sans-serif;
-      font-weight:600;
-      font-size:.95rem;
-      text-decoration:none
-    }
-    .back{
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.72rem;
-      letter-spacing:.06em;
-      color:var(--ink-soft);
-      text-decoration:none
-    }
-    .back:hover{color:var(--ink)}
-    .hero{
-      padding:84px 0 72px;
-      border-bottom:1px solid var(--line);
-      overflow:hidden
-    }
-    .hero .wrap{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:54px;
-      align-items:center
-    }
-    .hero h1{
-      font-size:clamp(2.5rem,5.6vw,4.4rem);
-      font-weight:700;
-      margin:8px 0 24px
-    }
-    .hero h1 em{font-style:normal;color:var(--tension)}
-    .hero .lede{
-      font-size:1.12rem;
-      max-width:31em;
-      margin-bottom:34px
-    }
-    .cta-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px
-    }
-    .btn{
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.82rem;
-      letter-spacing:.04em;
-      text-decoration:none;
-      padding:15px 26px;
-      border:1px solid var(--ink);
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      transition:.18s ease;
-      background:var(--ink);
-      color:var(--white)
-    }
-    .btn:hover{background:transparent;color:var(--ink)}
-    .btn--ghost{background:transparent;color:var(--ink)}
-    .btn--ghost:hover{background:var(--ink);color:var(--white)}
-    .btn .arrow{transition:transform .18s ease}
-    .btn:hover .arrow{transform:translateX(3px)}
-    .figure{width:100%;aspect-ratio:1/1}
-    .fig{width:100%;height:100%;display:block}
-    @keyframes ripple{
-      0%{r:18;opacity:1}
-      100%{r:150;opacity:0}
-    }
-    .fig .ring{transform-origin:center;animation:ripple 4s ease-out infinite}
-    .fig .ring:nth-of-type(2){animation-delay:1.3s}
-    .fig .ring:nth-of-type(3){animation-delay:2.6s}
-    .fig-caption{
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.66rem;
-      letter-spacing:.08em;
-      color:var(--ink-soft);
-      text-transform:uppercase;
-      margin-top:6px;
-      text-align:right
-    }
-    .section--panel{
-      background:var(--panel);
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line)
-    }
-    .grid3{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
-      margin-top:42px
-    }
-    .card{
-      border:1px solid var(--line-strong);
-      background:var(--paper);
-      padding:30px 26px
-    }
-    .card .n{
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.66rem;
-      letter-spacing:.12em;
-      color:var(--tension);
-      margin-bottom:14px
-    }
-    .card h3{font-size:1.15rem;margin-bottom:10px}
-    .card p{font-size:.94rem}
-    .split{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:48px;
-      align-items:center
-    }
-    .split p{font-size:1.05rem;margin-bottom:16px}
-    .os{
-      border:1px solid var(--ink);
-      box-shadow:6px 6px 0 var(--ink);
-      background:var(--paper);
-      padding:32px 30px
-    }
-    .os .k{
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.66rem;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      color:var(--tension);
-      margin-bottom:14px
-    }
-    .os ul{margin-top:4px}
-    .os li{
-      list-style:none;
-      padding:12px 0;
-      border-top:1px solid var(--line);
-      font-size:.94rem;
-      color:var(--ink);
-      display:flex;
-      gap:12px
-    }
-    .os li::before{
-      content:"○";
-      color:var(--compression)
-    }
-    .foot{
-      background:var(--ink);
-      color:var(--paper);
-      padding:84px 0 40px
-    }
-    .foot h2{color:var(--white)}
-    .foot .eyebrow{color:#9aa0ab}
-    .foot .eyebrow::before{background:var(--tension)}
-    .connect{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:24px;
-      margin:38px 0 56px
-    }
-    .connect a{
-      text-decoration:none;
-      border-top:1px solid #2c313b;
-      padding-top:16px;
-      display:block
-    }
-    .connect .k{
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.66rem;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      color:#8a909b;
-      margin-bottom:6px
-    }
-    .connect .v{
-      font-family:"Space Grotesk",sans-serif;
-      font-size:1.05rem;
-      color:var(--white)
-    }
-    .connect a:hover .v{color:#cdd2da}
-    .foot .legal{
-      border-top:1px solid #2c313b;
-      padding-top:24px;
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.7rem;
-      letter-spacing:.05em;
-      color:#8a909b;
-      display:flex;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      gap:12px
-    }
-    @media(max-width:900px){
-      .hero .wrap{grid-template-columns:1fr;gap:30px}
-      .figure{max-width:360px;order:-1}
-      .grid3{grid-template-columns:1fr}
-      .split{grid-template-columns:1fr}
-      .connect{grid-template-columns:1fr}
-      .section{padding:68px 0}
-    }
-    @media(prefers-reduced-motion:reduce){
-      .fig .ring{animation:none;opacity:.5}
-      html{scroll-behavior:auto}
-    }
-    :focus-visible{outline:2px solid var(--compression);outline-offset:3px}
-  </style>
-</head>
-<body>
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg-secondary);
+        font-family: "Inter", system-ui, sans-serif;
+        line-height: 1.6;
+      }
 
-<header class="topbar">
-  <div class="wrap">
-    <a href="https://texasmovement.com" class="brand">Texas Movement Social — Gather™</a>
-    <a href="https://texasmovement.com" class="back">← Texas Movement International</a>
-  </div>
-</header>
+      .page {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2rem 1.25rem 3rem;
+      }
 
-<main>
-  <section class="hero">
-    <div class="wrap">
-      <div>
-        <div class="eyebrow">Gather™ // Ceremony &amp; Experience</div>
-        <h1>The moments worth <em>gathering</em> for.</h1>
-        <p class="lede">
-          Gather™ is the ceremony and experience platform for couples, families, and communities — a single system for designing, running, and remembering the moments that matter. Powered by Circle OS™.
-        </p>
-        <div class="cta-row">
-          <a class="btn" href="mailto:movementconsultant@gmail.com?subject=Gather%20Early%20Access">
-            Request early access <span class="arrow">→</span>
-          </a>
-          <a class="btn btn--ghost" href="#circle">
-            How Circle OS works <span class="arrow">↓</span>
-          </a>
+      .topbar,
+      .hero,
+      .section,
+      .footer {
+        margin-bottom: 2rem;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+        border-bottom: 1px solid var(--border-soft);
+        padding-bottom: 1rem;
+      }
+
+      .brand {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+      }
+
+      .brand-mark {
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid rgba(148, 163, 184, 0.6);
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+      }
+
+      .brand-name {
+        font-weight: 700;
+        color: var(--fg-primary);
+      }
+
+      .brand-subtitle {
+        font-size: 0.9rem;
+        color: var(--fg-muted);
+      }
+
+      .nav {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .nav a {
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+
+      .nav a:hover {
+        text-decoration: underline;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
+        gap: 1.5rem;
+        align-items: start;
+        padding-top: 0.5rem;
+      }
+
+      .eyebrow {
+        color: #60a5fa;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+      }
+
+      h1 {
+        font-size: clamp(2.3rem, 4.2vw, 3.8rem);
+        line-height: 1.05;
+        color: var(--fg-primary);
+        margin: 0 0 0.5rem;
+      }
+
+      .hero-sub {
+        font-size: clamp(1.7rem, 3.1vw, 2.8rem);
+        line-height: 1.1;
+        color: var(--fg-secondary);
+        margin: 0 0 1rem;
+      }
+
+      .hero-body {
+        font-size: 0.98rem;
+        color: var(--fg-secondary);
+        max-width: 60ch;
+      }
+
+      h2 {
+        font-size: 0.95rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--fg-muted);
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        margin: 0 0 0.4rem;
+        color: var(--fg-primary);
+        font-size: 0.92rem;
+      }
+
+      .hero-card,
+      .card,
+      .faq-item,
+      .contact {
+        border: 1px solid var(--border-card);
+        border-radius: 1rem;
+        background: rgba(15, 23, 42, 0.55);
+      }
+
+      .hero-card {
+        overflow: hidden;
+      }
+
+      .hero-card-body {
+        padding: 1rem;
+      }
+
+      .hero-card-title {
+        margin: 0 0 0.35rem;
+        color: var(--fg-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.78rem;
+      }
+
+      .cta-row {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        margin-top: 1.25rem;
+      }
+
+      .button {
+        padding: 0.75rem 1rem;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .button.primary {
+        background: var(--accent);
+        color: var(--bg);
+      }
+
+      .button.secondary {
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        color: #e5e7eb;
+      }
+
+      .section {
+        padding-top: 0.5rem;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .card,
+      .faq-item {
+        padding: 1rem;
+      }
+
+      .bullets {
+        display: grid;
+        gap: 0.75rem;
+        max-width: 70ch;
+      }
+
+      .faq {
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .contact {
+        padding: 1rem;
+      }
+
+      .contact .fineprint {
+        font-size: 0.85rem;
+        color: var(--fg-muted);
+      }
+
+      .footer {
+        border-top: 1px solid var(--border-soft);
+        padding-top: 1rem;
+        color: var(--fg-muted);
+        font-size: 0.9rem;
+      }
+
+      .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .footer-links {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.85rem;
+      }
+
+      .footer-links a {
+        color: var(--fg-secondary);
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-separator {
+        color: #64748b;
+      }
+
+      @media (max-width: 800px) {
+        .hero,
+        .cards {
+          grid-template-columns: 1fr;
+        }
+
+        .topbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .footer-row {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">TS</div>
+          <div class="brand-copy">
+            <div class="brand-name">Texas Movement Social</div>
+            <div class="brand-subtitle">Public layer · Social</div>
+          </div>
         </div>
-      </div>
+        <nav class="nav">
+          <a href="#overview">Overview</a>
+          <a href="#follow">Where to follow</a>
+          <a href="#gather">Gather events</a>
+          <a href="#norms">Community norms</a>
+          <a href="#ecosystem">Ecosystem</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-      <aside class="figure">
-        <svg class="fig" viewBox="0 0 300 300" role="img" aria-labelledby="circle-os-title">
-          <title id="circle-os-title">CIRCLE OS — One center, widening circles</title>
-          <defs>
-            <radialGradient id="grad" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#274A78" stop-opacity="0.9"/>
-              <stop offset="100%" stop-color="#274A78" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-          <circle cx="150" cy="150" r="26" fill="var(--ink)"/>
-          <circle cx="150" cy="150" r="18" fill="none" stroke="#F4F5F0" stroke-width="2"/>
-          <circle class="ring" cx="150" cy="150" r="60" fill="none" stroke="url(#grad)" stroke-width="1.5"/>
-          <circle class="ring" cx="150" cy="150" r="100" fill="none" stroke="url(#grad)" stroke-width="1.5"/>
-          <circle class="ring" cx="150" cy="150" r="140" fill="none" stroke="url(#grad)" stroke-width="1.5"/>
-          <circle cx="150" cy="150" r="4" fill="#BD3B22"/>
-        </svg>
-        <div class="fig-caption">FIG. 04 — ONE CENTER, WIDENING CIRCLES · CIRCLE OS™</div>
-      </aside>
-    </div>
-  </section>
+      <section id="overview" class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">FOLLOW · GATHER · SIGNAL</p>
+          <h1>Where Texas Movement shows up in public.</h1>
+          <p class="hero-sub">
+            The social layer—follow the work across platforms, see live gatherings through Gather, and engage on clear
+            terms.
+          </p>
+          <p class="hero-body">
+            Texas Movement Social is the public layer of the ecosystem. It is for the public, the community, and event
+            attendees. It solves a simple problem: knowing where the system shows up and how to engage with it. It works
+            by organizing the real accounts by lane, running events through Gather, and distributing updates
+            deliberately. It connects to Media, which produces much of the signal, and to the founder profile at
+            AlexanderMathai.com. This is not a site about social-media strategy. It is the disciplined public face of
+            Texas Movement—where to follow, where to gather, and how to engage.
+          </p>
+          <div class="cta-row">
+            <a class="button primary" href="#follow">Follow the network</a>
+            <a class="button secondary" href="#gather">See upcoming gatherings</a>
+          </div>
+        </div>
 
-  <section class="section section--panel">
-    <div class="wrap">
-      <div class="eyebrow">Gather™ // 01 — What It Is</div>
-      <h2>Every ceremony is a system. Gather runs it.</h2>
-      <p>
-        A wedding, a memorial, a reunion, a community ritual — each one is a coordinated experience with people, timing, and meaning that have to hold together. Gather treats the ceremony as a system to be designed and run cleanly, so the people inside it can simply be present.
-      </p>
+        <aside class="hero-card">
+          <div class="hero-card-body">
+            <p class="hero-card-title">What this page is</p>
+            <p>
+              This is the public social layer. It shows where the ecosystem appears online, how Gather events work, and
+              what kind of interaction is welcomed.
+            </p>
+          </div>
+        </aside>
+      </section>
 
-      <div class="grid3">
-        <article class="card">
-          <div class="n mono">FOR COUPLES</div>
-          <h3>Ceremonies</h3>
-          <p>Design and run the day end to end — the flow, the people, the moments — without losing the meaning to logistics.</p>
-        </article>
-        <article class="card">
-          <div class="n mono">FOR FAMILIES</div>
-          <h3>Milestones</h3>
-          <p>Reunions, memorials, and milestones held together with the same care, and remembered long after.</p>
-        </article>
-        <article class="card">
-          <div class="n mono">FOR COMMUNITIES</div>
-          <h3>Rituals</h3>
-          <p>Recurring gatherings and community experiences, designed once and run again — at any scale.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+      <section id="follow" class="section">
+        <h2>Where to follow</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Founder</h3>
+            <p>
+              Perspective, systems thinking, and personal authority. Follow to understand the lens behind the work.
+            </p>
+            <p>
+              <a href="https://alexandermathai.com" target="_blank" rel="noreferrer">AlexanderMathai.com →</a>
+            </p>
+          </article>
+          <article class="card">
+            <h3>Texas Movement hub</h3>
+            <p>
+              Ecosystem overview, divisions, and routing. Follow when you care about the system as a whole.
+            </p>
+            <p>
+              <a href="https://texasmovement.com" target="_blank" rel="noreferrer">TexasMovement.com →</a>
+            </p>
+          </article>
+          <article class="card">
+            <h3>Performance</h3>
+            <p>
+              Training systems, movement education, and recovery—structured breakdowns and long-form teaching.
+            </p>
+            <p>
+              <a href="https://performance.texasmovement.com" target="_blank" rel="noreferrer">Performance →</a>
+            </p>
+          </article>
+          <article class="card">
+            <h3>HERO</h3>
+            <p>
+              The product-first brand—footwear, apparel, and visual identity. Follow for drops and product story.
+            </p>
+            <p>
+              <a href="https://hero.texasmovement.com" target="_blank" rel="noreferrer">HERO →</a>
+            </p>
+          </article>
+          <article class="card">
+            <h3>Media</h3>
+            <p>
+              Documentation and durable signal—content systems and records of the work across lanes.
+            </p>
+            <p>
+              <a href="https://media.texasmovement.com" target="_blank" rel="noreferrer">Media →</a>
+            </p>
+          </article>
+          <article class="card">
+            <h3>More lanes</h3>
+            <p>
+              Consulting, Distribution, Health, FounderLink, and Reparations each have their own surfaces. Follow the
+              lane that matches your interest and work.
+            </p>
+            <p>
+              <a href="https://texasmovement.com" target="_blank" rel="noreferrer">See all lanes at the hub →</a>
+            </p>
+          </article>
+        </div>
+      </section>
 
-  <section id="circle" class="section">
-    <div class="wrap split">
-      <div>
-        <div class="eyebrow">Gather™ // 02 — The Engine</div>
-        <h2>Powered by Circle OS™.</h2>
+      <section id="gather" class="section">
+        <h2>Gather events</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>What Gather is</h3>
+            <p>
+              Gather is the events and gatherings module inside Texas Movement Social—structured live presence, online
+              and offline, with clear scope.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Types of gatherings</h3>
+            <p>
+              Sessions, workshops, and events tied to the lanes—training, product, systems, and recovery—run with clear
+              expectations and outcomes.
+            </p>
+          </article>
+          <article class="card">
+            <h3>How to stay informed</h3>
+            <p>
+              Gather schedules and announcements are shared deliberately through the main lanes and, where relevant,
+              through direct event communication.
+            </p>
+          </article>
+          <article class="card">
+            <h3>What to expect</h3>
+            <p>
+              Calm, structured experiences. No chaos, no hype—just clear programming aligned with the lane hosting the
+              gathering.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="norms" class="section">
+        <h2>Community norms</h2>
+        <div class="bullets">
+          <p><strong>Calm, on-topic interaction.</strong> Engagement is welcomed when it is grounded, relevant, and in good faith.</p>
+          <p><strong>Signal over noise.</strong> The public presence favors clarity and substance over volume or spectacle.</p>
+          <p><strong>Respect the lanes.</strong> Keep questions and conversation aligned with the lane you are in; that makes better work possible.</p>
+          <p><strong>Boundaries are upheld.</strong> Legal, medical, and other boundaries stated across the ecosystem apply here too.</p>
+        </div>
+      </section>
+
+      <section id="ecosystem" class="section">
+        <h2>Ecosystem connections</h2>
+        <div class="bullets">
+          <p>
+            Media produces much of the signal; Social is where that signal reaches the public and where Gather lives.
+          </p>
+          <p>
+            Every lane links back up to the hub at
+            <a href="https://texasmovement.com" target="_blank" rel="noreferrer">TexasMovement.com</a> and sideways into
+            Social, so public presence stays coherent.
+          </p>
+          <p>
+            The founder layer at
+            <a href="https://alexandermathai.com" target="_blank" rel="noreferrer">AlexanderMathai.com</a> stays the
+            personal authority anchor behind all public activity.
+          </p>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+          <div class="faq-item">
+            <h3>What is Texas Movement Social?</h3>
+            <p>
+              It is the public layer where Texas Movement shows up across platforms, plus events through Gather. It is
+              not a social-media-tips site.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Where should I follow?</h3>
+            <p>
+              Follow by lane—HERO for product, Performance for training, Media for documentation, and the founder for
+              perspective. Links are organized on this page.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>What is Gather?</h3>
+            <p>
+              Gather is the events and gatherings module—structured live presence, online and offline, with clear scope
+              and expectations.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>What’s the content cadence?</h3>
+            <p>
+              Deliberate, not constant. Signal over volume, consistent with how Texas Movement Media operates.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>What kind of engagement is welcomed?</h3>
+            <p>
+              Calm, on-topic, good-faith interaction. This is a disciplined public space, not a hype feed.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>How does Social connect to the rest of Texas Movement?</h3>
+            <p>
+              Media produces the signal; Social is where it reaches the public and where gatherings happen, all linked
+              back to the hub and founder layers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <h2>Contact</h2>
         <p>
-          Circle OS is the operating layer underneath Gather: one center, widening circles. It models who's at the heart of a moment and how it radiates outward — to the inner circle, the wider family, the whole community.
+          For questions about public presence or Gather events, send a short note with context and what you’re hoping to
+          do or attend.
         </p>
-        <p>
-          <strong>Design the center once, and every circle stays in sync</strong> — invitations, roles, timing, and memory, all coordinated from a single source.
+        <a href="mailto:movementconsultant@gmail.com" class="email">movementconsultant@gmail.com</a>
+        <p class="fineprint">
+          Texas Movement Social does not handle support for every lane directly. For specific work—consulting,
+          performance, health, or reparations—start in the relevant lane or through FounderLink.
         </p>
-      </div>
-      <aside class="os">
-        <div class="k">Circle OS™ // Capabilities</div>
-        <ul>
-          <li>Model the moment as concentric circles of people.</li>
-          <li>Coordinate roles, timing, and flow from one place.</li>
-          <li>Radiate updates outward without re-doing the work.</li>
-          <li>Capture and keep the memory after the day ends.</li>
-        </ul>
-      </aside>
-    </div>
-  </section>
-</main>
+      </section>
 
-<footer class="foot">
-  <div class="wrap">
-    <div class="eyebrow">Gather™ // Connect</div>
-    <h2>Be first to gather.</h2>
-    <div class="connect">
-      <a href="mailto:movementconsultant@gmail.com?subject=Gather%20Early%20Access">
-        <div class="k">Early access</div>
-        <div class="v">Request an invite</div>
-      </a>
-      <a href="https://www.linkedin.com/in/alexandermathai/">
-        <div class="k">LinkedIn</div>
-        <div class="v">Alexander Mathai</div>
-      </a>
-      <a href="https://texasmovement.com">
-        <div class="k">Network</div>
-        <div class="v">texasmovement.com</div>
-      </a>
-    </div>
-    <div class="legal">
-      <span>© Texas Movement Social — Gather™ &amp; Circle OS™ · Part of Texas Movement International</span>
-      <span>ONE CENTER, WIDENING CIRCLES</span>
-    </div>
-  </div>
-</footer>
-
-</body>
+      <footer class="footer">
+        <div class="footer-row">
+          <p>© 2026 Texas Movement International · Systems for people who move.</p>
+          <div class="footer-links">
+            <a href="#overview">Back to top ↑</a>
+            <span class="footer-separator">·</span>
+            <a href="https://alexandermathai.com" target="_blank" rel="noreferrer">Founder</a>
+            <span class="footer-separator">·</span>
+            <a href="https://texasmovement.com" target="_blank" rel="noreferrer">TMI</a>
+            <span class="footer-separator">·</span>
+            <a href="https://media.texasmovement.com" target="_blank" rel="noreferrer">Media</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
 </html>
