@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE, BLURB, LIFECYCLE, TMI } from "../config/site";
+---
+
+<BaseLayout path="/">
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow">Texas Movement</span>
+      <h1 class="hero__headline">{SITE.name}</h1>
+      <p class="blurb">{BLURB}</p>
+
+      <div class="lifecycle" role="status">
+        <span class="lifecycle__dot" aria-hidden="true"></span>
+        {LIFECYCLE.badge}
+      </div>
+      <p class="lifecycle__statement">{LIFECYCLE.statement}</p>
+
+      <p class="ecosystem-note">
+        {SITE.name} is part of the Texas Movement ecosystem. Learn more at{" "}
+        <a href={TMI.url} rel="noopener">texasmovement.com</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

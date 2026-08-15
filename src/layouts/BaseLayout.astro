@@ -1,0 +1,83 @@
+---
+import "../styles/global.css";
+import SkipLink from "../components/SkipLink.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE, IS_PREVIEW, canonicalUrl } from "../config/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+  path?: string;
+}
+
+const {
+  title = SITE.title,
+  description = SITE.description,
+  path = "/",
+} = Astro.props;
+
+const pageTitle = title === SITE.title ? title : `${title} — ${SITE.name}`;
+
+// No JSON-LD structured data is emitted anywhere in this shell. The hard
+// boundary for this build allows nothing beyond the property's own bare
+// name in structured data, and every viable Organization/WebSite schema
+// shape carries more than that (url + name at minimum, often sameAs /
+// parentOrganization / founder / contactPoint) — see the legacy JSON-LD in
+// legacy/index.html for exactly the kind of scope creep this omission
+// avoids. Omitting entirely is the unambiguous safe choice; adding it back
+// is a launch-time decision, not a scaffolding one.
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+
+    {
+      IS_PREVIEW ? (
+        <meta name="robots" content="noindex, nofollow" />
+      ) : (
+        <>
+          <meta name="robots" content="index, follow" />
+          <link rel="canonical" href={canonicalUrl(path)} />
+        </>
+      )
+    }
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    {!IS_PREVIEW && <meta property="og:url" content={canonicalUrl(path)} />}
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+
+    <meta name="theme-color" content="#e7e8e2" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <SkipLink />
+    {IS_PREVIEW && (
+      <div class="preview-banner" role="region" aria-label="Preview status">
+        <p>Preview build — not the live site</p>
+      </div>
+    )}
+    <Header />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

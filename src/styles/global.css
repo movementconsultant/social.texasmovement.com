@@ -1,0 +1,271 @@
+/*
+ * Texas Movement shared design tokens — transcribed from the live
+ * texasmovement.com production HTML (see
+ * /tmp/.../foundation/DESIGN_SYSTEM.md for the source extraction). Reused
+ * here for visual consistency with the rest of the ecosystem. This is a
+ * minimal shell, so only the tokens and component shapes this page
+ * actually uses are included below.
+ */
+:root {
+  --paper: #e7e8e2;
+  --panel: #ddded7;
+  --hero: #e9e0d5;
+  --hero-soft: #f3ebe2;
+  --ink: #15181e;
+  --ink-soft: #454a54;
+  --line: #c4c6bd;
+  --line-strong: #a6a99f;
+  --white: #f4f5f0;
+  --compression: #274a78; /* blue accent — links/focus */
+  --tension: #bd3b22; /* rust accent — eyebrow ticks, badge dot */
+  --wrap: 40rem;
+  --wrap-wide: 56rem;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 16.5px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--compression);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* Accessible, visible focus state everywhere interactive. Matches the one
+   focus treatment already present in the current production brand — must
+   not be lost in this rebuild (see DESIGN_SYSTEM.md). */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--compression);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -999px;
+  left: 0;
+  z-index: 100;
+  background: var(--tension);
+  color: var(--white);
+  padding: var(--space-1) var(--space-2);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--space-3);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header__inner {
+  max-width: var(--wrap-wide);
+  margin-inline: auto;
+  padding: var(--space-2) var(--space-3);
+}
+
+.brand-mark {
+  text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+main {
+  display: block;
+}
+
+.section {
+  padding-block: var(--space-6) var(--space-5);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-block-end: var(--space-3);
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--tension);
+}
+
+.hero__headline {
+  font-size: clamp(2rem, 1.3rem + 3vw, 3rem);
+  margin-block-end: var(--space-3);
+}
+
+.blurb {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  max-width: var(--wrap);
+  margin-block-end: var(--space-4);
+}
+
+.lifecycle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid var(--line-strong);
+  background: var(--panel);
+  border-radius: 999px;
+  padding: 0.55rem 1.1rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  margin-block-end: var(--space-2);
+}
+
+.lifecycle__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--tension);
+  flex-shrink: 0;
+}
+
+.lifecycle__statement {
+  max-width: var(--wrap);
+  color: var(--ink-soft);
+  margin-block-end: var(--space-5);
+}
+
+.ecosystem-note {
+  max-width: var(--wrap);
+  border-top: 1px solid var(--line);
+  padding-block-start: var(--space-4);
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+
+.ecosystem-note a {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.notice {
+  max-width: var(--wrap);
+  border-left: 3px solid var(--tension);
+  padding-inline-start: var(--space-3);
+  margin-block-start: var(--space-3);
+  color: var(--ink-soft);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding-block: var(--space-3);
+}
+
+.site-footer__inner {
+  max-width: var(--wrap-wide);
+  margin-inline: auto;
+  padding-inline: var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+.site-footer__legal {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.site-footer__legal a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.site-footer__legal a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.preview-banner {
+  background: var(--tension);
+  padding: 0.4rem var(--space-2);
+}
+
+.preview-banner p {
+  color: var(--white);
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-family: "IBM Plex Mono", monospace;
+}

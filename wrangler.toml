@@ -1,0 +1,10 @@
+name = "social-texasmovement-com"
+compatibility_date = "2026-08-01"
+pages_build_output_dir = "dist"
+
+# Static Astro build (output: "static") — no adapter required for Cloudflare
+# Pages. This file declares the Pages project shape only; it does not
+# connect a domain, create a Cloudflare project, or deploy anything.
+# Preview mode is controlled by the PUBLIC_PREVIEW build-time environment
+# variable — see docs/LAUNCH_BLOCKERS.md. No deploy has been triggered from
+# this build.
